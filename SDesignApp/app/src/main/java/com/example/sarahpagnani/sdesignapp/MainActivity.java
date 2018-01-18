@@ -1,24 +1,16 @@
 package com.example.sarahpagnani.sdesignapp;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
 import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.example.SDesignApp.MESSAGE";
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
 //        Button button0 = (Button) findViewById(R.id.loginbutton);
 //        Button button1 = (Button) findViewById(R.id.button3);
 //        button0.setOnClickListener((View.OnClickListener) this);
 //        button1.setOnClickListener((View.OnClickListener) this);
-    }
 
     public void sendMessage(View view) {
         switch (view.getId()) {
