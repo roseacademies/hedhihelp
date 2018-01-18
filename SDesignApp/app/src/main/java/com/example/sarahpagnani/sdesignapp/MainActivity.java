@@ -94,30 +94,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // findViewById(R.id.verify_email_button).setOnClickListener(this); //<- this might be good to have later
 
         mAuth = FirebaseAuth.getInstance();
-
+        if (mAuth.getCurrentUser() != null) {
+            startActivity(new Intent(this, HomeActivity.class));
+        }
     }
 
     public static boolean isValidEmail(CharSequence target) {
         return (!TextUtils.isEmpty(target) && Patterns.EMAIL_ADDRESS.matcher(target).matches());
     }
 
-    public void createAccount(String email, String password) {
-
-        if (!isValidEmail(email)) throw new AssertionError();
-        mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()) {
-                    // sign in successful
-                    Log.d(TAG, "createUserWithEmail:success");
-                    FirebaseUser user = mAuth.getCurrentUser();
-                    //updateUI(user);
-                } else {
-
-                }
-            }
-        });
-    }
 
     @Override
     public void onStart() {
@@ -131,37 +116,45 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.loginbutton).setOnClickListener(this);
         findViewById(R.id.create_account).setOnClickListener(this);
         findViewById(R.id.logoutbutton).setOnClickListener(this);
-
+        if (currentUser!=null) startActivity(new Intent(this, HomeActivity.class));
         updateUI(currentUser);
     }
 
     public void signIn(String email, String password) {
         Log.d(TAG, "signIn:"+email);
+        Toast.makeText(MainActivity.this, "Button clicked!", Toast.LENGTH_SHORT).show();
+        if (!isValidEmail(email)) Toast.makeText(MainActivity.this, "Invalid email!", Toast.LENGTH_SHORT).show();
+        else {
+            Toast.makeText(MainActivity.this, "Valid inputs...", Toast.LENGTH_SHORT).show();
+            mAuth.signInWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
 
-        isValidEmail(email);
-        mAuth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            Log.d(TAG, "signInWithEmail:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            updateUI(user);
-                        } else {
-                            // If sign in fails, display a message to the user.
-                            Log.w(TAG, "signInWithEmail:failure", task.getException());
-                            Toast.makeText(MainActivity.this, "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
-                            updateUI(null);
-                        }
+                            if (task.isSuccessful()) {
+                                // Sign in success, update UI with the signed-in user's information
+                                Log.d(TAG, "signInWithEmail:success");
+                                Toast.makeText(MainActivity.this, "Sign in success!", Toast.LENGTH_SHORT).show();
+                                FirebaseUser user = mAuth.getCurrentUser();
+                            } else {
+                                // If sign in fails, display a message to the user.
+                                Log.w(TAG, "signInWithEmail:failure", task.getException());
+                                Toast.makeText(MainActivity.this, "Authentication failed.",
+                                        Toast.LENGTH_SHORT).show();
+                                updateUI(null);
+                            }
 
-                        if (!task.isSuccessful()) {
+                            if (!task.isSuccessful()) {
+                                Toast.makeText(MainActivity.this, "Sign in failed.", Toast.LENGTH_SHORT).show();
 //                            mStatusTextView.setText(R.string.auth_failed);
+                            }
+                            hideProgressDialog();
                         }
-                        hideProgressDialog();
-                    }
-                });
+                    });
+            if (mAuth.getCurrentUser() != null) {
+                startActivity(new Intent(this, HomeActivity.class));
+            }
+        }
     }
 
 
@@ -193,6 +186,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int i = v.getId();
         if (i==R.id.loginbutton) {
             signIn(mEmailField.getText().toString(), mPasswordField.getText().toString());
+            if (mAuth.getCurrentUser()!=null) startActivity(new Intent(MainActivity.this, HomeActivity.class));
         } else if (i == R.id.create_account) {
             startActivity(new Intent(this, AccountActivity.class));
 //            createAccount(mEmailField.getText().toString(), mPasswordField.getText().toString());
