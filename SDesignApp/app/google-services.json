@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "893831655659",
+    "firebase_url": "https://sdesignapp.firebaseio.com",
+    "project_id": "sdesignapp",
+    "storage_bucket": "sdesignapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:893831655659:android:e9e3447a3aaa58aa",
+        "android_client_info": {
+          "package_name": "com.example.sarahpagnani.sdesignapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "893831655659-ka85v0gpeg826b1e2jnt0tu0ivpq9bto.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sarahpagnani.sdesignapp",
+            "certificate_hash": "92d46f4c46529708ff8ea6af4591b22d8c9f786c"
+          }
+        },
+        {
+          "client_id": "893831655659-oi4j09lpivcmum2berqu8tqdr4dnt7bq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_BT4wAXQLd-2hcfj1J7-djeN15Hscz0I"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "893831655659-oi4j09lpivcmum2berqu8tqdr4dnt7bq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -30,6 +30,7 @@
         <activity android:name=".HomeActivity" />
         <activity android:name=".LessonActivity" />
         <activity android:name=".ResourceActivity"></activity>
+        <activity android:name=".LoginActivity" />
     </application>
 
 </manifest>
