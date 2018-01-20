@@ -95,7 +95,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mAuth = FirebaseAuth.getInstance();
         if (mAuth.getCurrentUser() != null) {
-            startActivity(new Intent(this, HomeActivity.class));
+            Intent homeIntent = new Intent(this, HomeActivity.class);
+            homeIntent.putExtra(EXTRA_MESSAGE, mAuth.getCurrentUser().getUid());
+            startActivity(homeIntent);
         }
     }
 
@@ -136,6 +138,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 Log.d(TAG, "signInWithEmail:success");
                                 Toast.makeText(MainActivity.this, "Sign in success!", Toast.LENGTH_SHORT).show();
                                 FirebaseUser user = mAuth.getCurrentUser();
+                                startActivity(new Intent(MainActivity.this, HomeActivity.class));
                             } else {
                                 // If sign in fails, display a message to the user.
                                 Log.w(TAG, "signInWithEmail:failure", task.getException());
@@ -186,7 +189,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int i = v.getId();
         if (i==R.id.loginbutton) {
             signIn(mEmailField.getText().toString(), mPasswordField.getText().toString());
-            if (mAuth.getCurrentUser()!=null) startActivity(new Intent(MainActivity.this, HomeActivity.class));
         } else if (i == R.id.create_account) {
             startActivity(new Intent(this, AccountActivity.class));
 //            createAccount(mEmailField.getText().toString(), mPasswordField.getText().toString());

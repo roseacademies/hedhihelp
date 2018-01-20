@@ -28,4 +28,7 @@
     <string name="email">Email:</string>
     <string name="password">Password:</string>
     <string name="create_account">Create Account</string>
+    <string name="welcome_user">Welcome, User.</string>
+    <string name="create_account_name_text">Name:</string>
+    <string name="greetingString">Greetings, %s</string>
 </resources>
