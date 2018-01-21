@@ -13,11 +13,11 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:fontFamily="@font/calligraffitti"
+        android:fontFamily="@font/syncopate"
         android:text="User's Lessons"
         android:textAlignment="center"
         android:textAppearance="@android:style/TextAppearance.DialogWindowTitle"
-        android:textSize="36sp"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -40,6 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@android:color/holo_green_light"
+            android:background="@drawable/rounded_button"
             android:text="Lesson One" />
 
         <Button
@@ -47,6 +48,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@android:color/holo_orange_dark"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_button"
             android:text="Lesson Two" />
 
         <Button
@@ -54,6 +57,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@android:color/holo_orange_light"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_button"
             android:text="Coming soon..." />
 
     </LinearLayout>
