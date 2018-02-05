@@ -15,13 +15,14 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/syncopate"
-        android:text="Welcome, User."
         android:textAlignment="center"
         android:textAppearance="@android:style/TextAppearance.DialogWindowTitle"
         android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/welcome_text" />
 
     <Button
         android:id="@+id/lessonbutton"
@@ -31,15 +32,15 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:backgroundTint="@color/lgreen"
         android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/green"
         android:onClick="sendMessage"
-        android:text="Lessons"
         app:layout_constraintBottom_toTopOf="@+id/button7"
         app:layout_constraintEnd_toStartOf="@+id/button4"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        tools:text="@string/lessons_module" />
 
     <Button
         android:id="@+id/button4"
@@ -47,12 +48,12 @@
         android:layout_height="130dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:backgroundTint="@android:color/holo_orange_dark"
         android:background="@drawable/rounded_button"
-        android:text="Calendar"
+        android:backgroundTint="@android:color/holo_orange_dark"
         app:layout_constraintBaseline_toBaselineOf="@+id/lessonbutton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/lessonbutton" />
+        app:layout_constraintStart_toEndOf="@+id/lessonbutton"
+        tools:text="@string/calendar_module" />
 
     <Button
         android:id="@+id/button7"
@@ -62,13 +63,13 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:backgroundTint="@color/lorange"
         android:background="@drawable/rounded_button"
-        android:text="Resources"
+        android:backgroundTint="@color/lorange"
         app:layout_constraintBottom_toTopOf="@+id/button9"
         app:layout_constraintEnd_toStartOf="@+id/button8"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lessonbutton" />
+        app:layout_constraintTop_toBottomOf="@+id/lessonbutton"
+        tools:text="@string/resources_module" />
 
     <Button
         android:id="@+id/button8"
@@ -76,12 +77,12 @@
         android:layout_height="130dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:backgroundTint="@color/lgreen"
         android:background="@drawable/rounded_button"
-        android:text="Forum"
+        android:backgroundTint="@color/green"
         app:layout_constraintBaseline_toBaselineOf="@+id/button7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button7" />
+        app:layout_constraintStart_toEndOf="@+id/button7"
+        tools:text="@string/forum_module" />
 
     <Button
         android:id="@+id/button9"
@@ -91,13 +92,13 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:backgroundTint="@android:color/holo_orange_dark"
         android:background="@drawable/rounded_button"
-        android:text="Settings"
+        android:backgroundTint="@android:color/holo_orange_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button10"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button7" />
+        app:layout_constraintTop_toBottomOf="@+id/button7"
+        tools:text="@string/settings_module" />
 
     <Button
         android:id="@+id/button10"
@@ -105,10 +106,10 @@
         android:layout_height="130dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:backgroundTint="@color/lorange"
         android:background="@drawable/rounded_button"
-        android:text="About Us"
+        android:backgroundTint="@color/lorange"
         app:layout_constraintBaseline_toBaselineOf="@+id/button9"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button9" />
+        app:layout_constraintStart_toEndOf="@+id/button9"
+        tools:text="@string/about_module" />
 </android.support.constraint.ConstraintLayout>
