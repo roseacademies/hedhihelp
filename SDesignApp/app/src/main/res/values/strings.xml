@@ -28,4 +28,8 @@
     <string name="email">Email:</string>
     <string name="password">Password:</string>
     <string name="create_account">Create Account</string>
+
+    <string name="create_account_name_text">Name: </string>
+    <string name="action_sign_out">Sign out</string>
+    <string name="promt_account">Prompt account</string>
 </resources>
