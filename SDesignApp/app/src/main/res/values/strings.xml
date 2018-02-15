@@ -1,6 +1,6 @@
 <resources>
     <!-- Strings related to main screen -->
-    <string name="app_name">Anguva\'s Story</string>
+    <string name="app_name">Angavu\'s Story</string>
     <string name="title_activity_login">Sign In</string>
     <string name="sign_out">Sign Out</string>
     <string name="account_crete_prompt">Don\'t have an account?</string>
