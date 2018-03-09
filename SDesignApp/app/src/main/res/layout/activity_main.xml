@@ -126,7 +126,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/password_form"
-            tools:text="@string/sign_out" />
+            android:text="@string/sign_out" />
 
         <TextView
             android:id="@+id/acct_no"
@@ -140,7 +140,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/loginbutton"
-            tools:text="@string/account_crete_prompt" />
+            android:text="@string/account_crete_prompt" />
 
         <Button
             android:id="@+id/create_account"

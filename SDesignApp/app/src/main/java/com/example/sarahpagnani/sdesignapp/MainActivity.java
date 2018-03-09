@@ -94,11 +94,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // findViewById(R.id.verify_email_button).setOnClickListener(this); //<- this might be good to have later
 
         mAuth = FirebaseAuth.getInstance();
-        if (mAuth.getCurrentUser() != null) {
-            Intent homeIntent = new Intent(this, HomeActivity.class);
-            homeIntent.putExtra(EXTRA_MESSAGE, mAuth.getCurrentUser().getUid());
-            startActivity(homeIntent);
-        }
+//        if (mAuth.getCurrentUser() != null) {
+//            Intent homeIntent = new Intent(this, HomeActivity.class);
+//            homeIntent.putExtra(EXTRA_MESSAGE, mAuth.getCurrentUser().getUid());
+//            startActivity(homeIntent);
+//        }
     }
 
     public static boolean isValidEmail(CharSequence target) {
@@ -118,16 +118,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.loginbutton).setOnClickListener(this);
         findViewById(R.id.create_account).setOnClickListener(this);
         findViewById(R.id.logoutbutton).setOnClickListener(this);
-        if (currentUser!=null) startActivity(new Intent(this, HomeActivity.class));
+//        if (currentUser!=null) startActivity(new Intent(this, HomeActivity.class));
         updateUI(currentUser);
     }
 
     public void signIn(String email, String password) {
         Log.d(TAG, "signIn:"+email);
-        Toast.makeText(MainActivity.this, "Button clicked!", Toast.LENGTH_SHORT).show();
-        if (!isValidEmail(email)) Toast.makeText(MainActivity.this, "Invalid email!", Toast.LENGTH_SHORT).show();
+        if (!isValidEmail(email)) Toast.makeText(MainActivity.this, "Invalid email", Toast.LENGTH_SHORT).show();
         else {
-            Toast.makeText(MainActivity.this, "Valid inputs...", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(MainActivity.this, "Valid inputs...", Toast.LENGTH_SHORT).show();
             mAuth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                         @Override
@@ -154,9 +153,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             hideProgressDialog();
                         }
                     });
-            if (mAuth.getCurrentUser() != null) {
-                startActivity(new Intent(this, HomeActivity.class));
-            }
+//            if (mAuth.getCurrentUser() != null) {
+//                startActivity(new Intent(this, HomeActivity.class));
+//            }
         }
     }
 
@@ -191,6 +190,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             signIn(mEmailField.getText().toString(), mPasswordField.getText().toString());
         } else if (i == R.id.create_account) {
             startActivity(new Intent(this, AccountActivity.class));
+
 //            createAccount(mEmailField.getText().toString(), mPasswordField.getText().toString());
         } else if (i == R.id.logoutbutton) {
             signOut();

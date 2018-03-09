@@ -25,6 +25,7 @@ public class AccountActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private EditText mEmailField;
     private EditText mPasswordField;
+    private EditText mConfirmPassField;
     private EditText mNameField;
     private EditText mAgeField;
     private FirebaseDatabase fbdb;
@@ -39,6 +40,7 @@ public class AccountActivity extends AppCompatActivity {
         //Views
         mEmailField = (EditText) findViewById(R.id.create_account_email_form);
         mPasswordField = (EditText) findViewById(R.id.create_account_password_form);
+        mConfirmPassField = (EditText) findViewById(R.id.create_account_confirm_password_form);
         mNameField = findViewById(R.id.create_account_name_form);
         mAgeField = findViewById(R.id.create_account_age_form);
 
@@ -62,7 +64,8 @@ public class AccountActivity extends AppCompatActivity {
         Toast.makeText(AccountActivity.this, "Creating account...", Toast.LENGTH_SHORT).show();
         if (!isValidEmail(email)) Toast.makeText(AccountActivity.this, "Please put in a valid email.",
                 Toast.LENGTH_SHORT).show();
-        else if (!isValidPassword(password)) Toast.makeText(AccountActivity.this, "Empty passwords are not valid.",Toast.LENGTH_SHORT).show();
+        else if (!isValidPassword(password)) Toast.makeText(AccountActivity.this, "Password must be at least 8 characters long.",Toast.LENGTH_SHORT).show();
+        else if (!mConfirmPassField.getText().toString().equals(mPasswordField.getText().toString())) Toast.makeText(AccountActivity.this, "Passwords do not match.", Toast.LENGTH_SHORT).show();
         else {
             Toast.makeText(AccountActivity.this, "Creating account...", Toast.LENGTH_SHORT).show();
             mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -70,12 +73,12 @@ public class AccountActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
                         // sign in successful
-                        Toast.makeText(AccountActivity.this, "UID: " + task.getResult(), Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(AccountActivity.this, "UID: " + task.getResult(), Toast.LENGTH_SHORT).show();
                         fuser = task.getResult().getUser();
                         AppUser user = new AppUser(fuser != null ? fuser.getUid() : null, mNameField.getText().toString(), mEmailField.getText().toString(), mAgeField.getText().toString());
                         fbdb.getReference().child("users").child(user.UID).setValue(user);
-                        finish();
                         Log.d(TAG, "createUserWithEmail:success");
+                        finish();
                     } else {
                         Toast.makeText(AccountActivity.this, "Sign in unsuccessful!", Toast.LENGTH_SHORT).show();
                     }
@@ -87,6 +90,7 @@ public class AccountActivity extends AppCompatActivity {
     public void create_account(View view) {
         String email = mEmailField.getText().toString();
         String password = mPasswordField.getText().toString();
+        String password2 = mPasswordField.getText().toString();
         String name = mNameField.getText().toString();
         String age = mAgeField.getText().toString();
         createAccount(email, password);

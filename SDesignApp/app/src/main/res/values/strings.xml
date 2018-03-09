@@ -20,7 +20,7 @@
     <string name="lesson_text">User\'s Lessons</string>
     <string name="lesson_one">Lesson One</string>
     <string name="lesson_two">Lesson Two</string>
-    <string name="lesson_future">Coming Soon...</string>
+    <string name="lesson_future">Coming Soon…</string>
 
 
 
@@ -56,5 +56,6 @@
     <string name="name_prompt">Name</string>
     <string name="age_label">Age:</string>
     <string name="age_prompt">Age</string>
+    <string name="create_account_confirm_password">Confirm password:</string>
 
 </resources>
