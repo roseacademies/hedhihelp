@@ -29,8 +29,8 @@
         <activity android:name=".AccountActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".LessonActivity" />
-        <activity android:name=".ResourceActivity"></activity>
-        <!--<activity android:name=".LoginActivity" />-->
+        <activity android:name=".ResourceActivity" />
+        <activity android:name=".PeriodActivity" />
     </application>
 
 </manifest>

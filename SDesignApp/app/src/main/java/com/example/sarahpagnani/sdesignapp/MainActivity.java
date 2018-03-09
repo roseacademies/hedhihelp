@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //    private TextView mDetailTextView;
     private EditText mEmailField;
     private EditText mPasswordField;
+    boolean wasLoggedIn = false;
 
     @VisibleForTesting
     public ProgressDialog mProgressDialog;
@@ -94,11 +95,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // findViewById(R.id.verify_email_button).setOnClickListener(this); //<- this might be good to have later
 
         mAuth = FirebaseAuth.getInstance();
-//        if (mAuth.getCurrentUser() != null) {
-//            Intent homeIntent = new Intent(this, HomeActivity.class);
+        if (mAuth.getCurrentUser() != null) {
+            Intent homeIntent = new Intent(this, HomeActivity.class);
 //            homeIntent.putExtra(EXTRA_MESSAGE, mAuth.getCurrentUser().getUid());
-//            startActivity(homeIntent);
-//        }
+            startActivity(homeIntent);
+        }
     }
 
     public static boolean isValidEmail(CharSequence target) {

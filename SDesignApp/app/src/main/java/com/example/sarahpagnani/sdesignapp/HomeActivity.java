@@ -7,13 +7,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity implements View.OnClickListener{
     public static final String EXTRA_MESSAGE = "com.example.SDesignApp.MESSAGE";
+    Button mCalendarButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        mCalendarButton = (Button) findViewById(R.id.calendar_button);
+        mCalendarButton.setOnClickListener(this);
 
         // Get the Intent that started this activity and extract the string
         Intent intent = getIntent();
@@ -30,5 +34,13 @@ public class HomeActivity extends AppCompatActivity {
         String message = button.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
+    }
+
+    @Override
+    public void onClick(View view) {
+        int id = view.getId();
+        if (id == R.id.calendar_button) { // This is the button for the calendar
+            startActivity(new Intent(this, PeriodActivity.class));
+        }
     }
 }
