@@ -1,6 +1,7 @@
 package com.example.sarahpagnani.sdesignapp;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CalendarView;
 import android.widget.Toast;
 
 import com.example.sarahpagnani.sdesignapp.PeriodData.PeriodDbHelper;
@@ -18,16 +20,84 @@ import static android.content.ContentValues.TAG;
 
 import java.util.Date;
 
-/**
- * Created by SarekSoteloJimenez on 3/8/18.
- */
-
 public class PeriodActivity extends AppCompatActivity implements View.OnClickListener{
     PeriodDbHelper mDBHelper;
     private Button startTrack;
     private Button endTrack;
     private Button settings;
+    private CalendarView mCalendar;
     boolean isPeriod;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_calendar);
+
+        // This gets a new reference to the database
+        mDBHelper = new PeriodDbHelper(this);
+        SQLiteDatabase db = mDBHelper.getReadableDatabase();
+        int result = queryDB(db);
+
+        // Let's start doing some period logic
+        long startDate = getStartDate(db);
+        Date start = new Date(startDate);
+//        start.
+
+        // This gets the buttons mapped to what's going on
+        startTrack = (Button) findViewById(R.id.PeriodStatus);
+        startTrack.setOnClickListener(this);
+        endTrack = (Button) findViewById(R.id.StopPeriod);
+        endTrack.setOnClickListener(this);
+        settings  = (Button) findViewById(R.id.PeriodSettings);
+        settings.setOnClickListener(this);
+
+        // Let's map the CalendarView to something real quick
+        mCalendar = (CalendarView) findViewById(R.id.calendarView);
+
+        updateUI(result);
+    }
+
+    public void updateUI(int periodStatus) {
+        if (periodStatus == 1) {
+//            Log.i(TAG, "HELLO" + results[0]);
+//            Log.i(TAG, results);
+//            Toast.makeText(PeriodActivity.this, "There is a period going on", Toast.LENGTH_SHORT).show();
+            findViewById(R.id.PeriodStatus).setVisibility(View.GONE);
+            findViewById(R.id.StopPeriod).setVisibility(View.VISIBLE);
+        } else {
+//            Toast.makeText(PeriodActivity.this, "There is no period.", Toast.LENGTH_SHORT).show();
+            findViewById(R.id.PeriodStatus).setVisibility(View.VISIBLE);
+            findViewById(R.id.StopPeriod).setVisibility(View.GONE);
+        }
+
+    }
+
+    public long getStartDate(SQLiteDatabase db) {
+        String[] projection = {
+                BaseColumns._ID,
+                PeriodTable.PeriodEntry.START_DATE
+        };
+
+        String selection = PeriodTable.PeriodEntry.PERIOD_STATUS + " = ?";
+        String[]selectionArgs = {"1"};
+
+        Cursor cursor = db.query(
+                PeriodTable.PeriodEntry.TABLE_NAME,
+                projection,
+                selection,
+                selectionArgs,
+                null,
+                null,
+                null
+        );
+
+        cursor.moveToNext();
+        cursor.close();
+        if (cursor.isAfterLast()) return -1;
+        Toast.makeText(PeriodActivity.this, "START DATE: " + cursor.getColumnIndexOrThrow(PeriodTable.PeriodEntry.START_DATE), Toast.LENGTH_SHORT).show();
+        return cursor.getColumnIndexOrThrow(PeriodTable.PeriodEntry.START_DATE);
+    }
+
 
     public int queryDB(SQLiteDatabase db) {
         String[] projection = {
@@ -75,39 +145,6 @@ public class PeriodActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calendar);
-
-        // This gets a new reference to the database
-        mDBHelper = new PeriodDbHelper(this);
-        SQLiteDatabase db = mDBHelper.getReadableDatabase();
-        int results = queryDB(db);
-
-        startTrack = (Button) findViewById(R.id.PeriodStatus);
-        startTrack.setOnClickListener(this);
-        endTrack = (Button) findViewById(R.id.StopPeriod);
-        endTrack.setOnClickListener(this);
-        settings  = (Button) findViewById(R.id.PeriodSettings);
-        settings.setOnClickListener(this);
-
-        if (results == 1) {
-//            Log.i(TAG, "HELLO" + results[0]);
-//            Log.i(TAG, results);
-            Toast.makeText(PeriodActivity.this, "There is a period going on", Toast.LENGTH_SHORT).show();
-            findViewById(R.id.PeriodStatus).setVisibility(View.GONE);
-            findViewById(R.id.StopPeriod).setVisibility(View.VISIBLE);
-        } else {
-            Toast.makeText(PeriodActivity.this, "There is no period.", Toast.LENGTH_SHORT).show();
-            findViewById(R.id.PeriodStatus).setVisibility(View.VISIBLE);
-            findViewById(R.id.StopPeriod).setVisibility(View.GONE);
-        }
-
-
-    }
-
-
-    @Override
     public void onClick(View view) {
         SQLiteDatabase db = mDBHelper.getReadableDatabase();
         int id = view.getId();
@@ -132,7 +169,7 @@ public class PeriodActivity extends AppCompatActivity implements View.OnClickLis
             findViewById(R.id.PeriodStatus).setVisibility(View.VISIBLE);
         }
         if (id == R.id.PeriodSettings) {
-            
+            startActivity(new Intent(PeriodActivity.this, PeriodSettingsActivity.class));
         }
     }
 }

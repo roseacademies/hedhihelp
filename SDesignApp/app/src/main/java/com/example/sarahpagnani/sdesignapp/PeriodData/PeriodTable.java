@@ -19,7 +19,7 @@ public final class PeriodTable {
                     PeriodEntry._ID + " INTEGER PRIMARY KEY," +
                     PeriodEntry.START_DATE + " DATE," +
                     PeriodEntry.END_DATE + " DATE," +
-                    PeriodEntry.PERIOD_STATUS + " INTEGER)";
+                    PeriodEntry.PERIOD_STATUS + " INTEGER);";
 
     public static final String SQL_DELETE_ENTRIES =
             "DROP TABLE IF EXISTS " + PeriodEntry.TABLE_NAME;
