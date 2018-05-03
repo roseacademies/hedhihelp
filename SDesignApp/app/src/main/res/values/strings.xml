@@ -65,4 +65,8 @@
     <string name="save_settings">Save Settings</string>
     <string name="restore_default_settings">Restore Default Settings</string>
 
+    <string name="title_activity_fullscreen">ModuleActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
 </resources>
