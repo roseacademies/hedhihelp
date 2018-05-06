@@ -69,7 +69,5 @@
     <string name="title_activity_forum">Discussion</string>
     <string name="account_crete_prompt">Don\'t have an account?</string>
     <string name="lesson_two">Lesson Two</string>
-    <string name="firebase_status_fmt">F</string>
-    <string name="error_field_required">This field is required</string>
-
+    <string name="welcome_text">Welcome!</string>
 </resources>
