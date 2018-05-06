@@ -2,7 +2,7 @@ package com.example.sarahpagnani.sdesignapp.ClinicResources;
 
 import java.io.Serializable;
 
-/**
+/*
  * Created by SarekSoteloJimenez on 5/5/18.
  */
 
@@ -10,13 +10,13 @@ public class Clinic implements Serializable {
     private String name;
     private String address;
     private String phone;
-    private String latlong;
+    private String url;
 
-    public Clinic(String _name, String _address, String _phone, String _latlong){
+    public Clinic(String _name, String _address, String _phone, String _url){
         this.name = _name;
         this.address = _address;
         this.phone = _phone;
-        this.latlong = _latlong;
+        this.url = _url;
     }
 
 
@@ -44,11 +44,11 @@ public class Clinic implements Serializable {
         this.phone = phone;
     }
 
-    public String getLatlong() {
-        return latlong;
+    public String getURL() {
+        return url;
     }
 
-    public void setLatlong(String latlong) {
-        this.latlong = latlong;
+    public void setURL(String url) {
+        this.url = url;
     }
 }

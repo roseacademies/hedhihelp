@@ -23,7 +23,7 @@ public class Forum extends AppCompatActivity {
         String message = intent.getStringExtra(HomeActivity.EXTRA_MESSAGE);
 
         WebView webview = (WebView) findViewById(R.id.myWebView);
-        webview.setWebViewClient(new MyWebViewClient(this));
+        webview.setWebViewClient(new MyWebViewClient());
         webview.getSettings().setJavaScriptEnabled(true);
         webview.loadUrl(url);
     }

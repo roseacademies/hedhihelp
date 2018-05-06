@@ -7,7 +7,7 @@ import android.webkit.WebViewClient;
  */
 
 class MyWebViewClient extends WebViewClient {
-    public MyWebViewClient(Forum forum) {
+    public MyWebViewClient() {
         super();
     }
 
