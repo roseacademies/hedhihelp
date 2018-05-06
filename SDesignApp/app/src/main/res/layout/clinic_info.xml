@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/clinic_name"
+        android:layout_width="384dp"
+        android:layout_height="32dp"
+        android:text="Clinic Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/clinic_address"
+        android:layout_width="383dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:text="Clinic Address"
+        app:layout_constraintStart_toStartOf="@id/clinic_name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/clinic_phone"
+        android:layout_width="383dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="72dp"
+        android:text="Clinic Phone"
+        app:layout_constraintStart_toStartOf="@id/clinic_address"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/directions_button"
+        android:layout_width="144dp"
+        android:layout_height="74dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/coral"
+        android:fontFamily="@font/raleway_bold"
+        android:text="Directions"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/clinic_phone"
+        app:layout_constraintTop_toBottomOf="@+id/clinic_phone" />
+
+</android.support.constraint.ConstraintLayout>
