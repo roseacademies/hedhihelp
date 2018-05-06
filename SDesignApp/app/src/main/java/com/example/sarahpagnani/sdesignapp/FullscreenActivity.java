@@ -9,6 +9,7 @@ import android.util.DisplayMetrics;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /**
@@ -35,6 +36,7 @@ public class FullscreenActivity extends AppCompatActivity implements View.OnClic
     private int image_count = 0;
 
     private Integer images[];
+    private int texts[];
     private float[] lastTouchDownXY = new float[2];
 
     /**
@@ -103,10 +105,15 @@ public class FullscreenActivity extends AppCompatActivity implements View.OnClic
         if (module_number == 2)
             maxImages = 12;
         images = new Integer[maxImages];
+        texts = new int[maxImages];
         for (int i=0;i < maxImages;i++) {
             images[i] = getResources().getIdentifier("module_" +
                             String.valueOf(module_number) + "_" + String.valueOf(i+1),
                     "drawable", getPackageName());
+            texts[i] = getResources().getIdentifier("module_" +
+                            String.valueOf(module_number) + "_" + String.valueOf(i+1),
+                    "string", getPackageName());
+
         }
 
     }
@@ -139,6 +146,8 @@ public class FullscreenActivity extends AppCompatActivity implements View.OnClic
     public void setCurrentImage() {
         final ImageView imageView = (ImageView) findViewById(R.id.modules_image);
         imageView.setImageResource(images[image_count]);
+        final TextView textView = (TextView) findViewById(R.id.myImageViewText);
+        textView.setText(texts[image_count]);
     }
 
     @Override
