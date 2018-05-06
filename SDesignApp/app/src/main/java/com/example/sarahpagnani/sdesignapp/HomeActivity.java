@@ -10,6 +10,7 @@ import android.widget.TextView;
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener{
     public static final String EXTRA_MESSAGE = "com.example.SDesignApp.MESSAGE";
     Button mCalendarButton;
+    Button mForumButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,13 +20,16 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         mCalendarButton = (Button) findViewById(R.id.calendar_button);
         mCalendarButton.setOnClickListener(this);
 
+        mForumButton = (Button) findViewById(R.id.button8);
+        mForumButton.setOnClickListener(this);
+
         // Get the Intent that started this activity and extract the string
         Intent intent = getIntent();
         String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
 
         // Capture the layout's TextView and set the string as its text
         TextView textView = findViewById(R.id.textView6);
-        textView.setText(message);
+//        textView.setText(message);
     }
 
     public void sendMessage(View view) {
@@ -44,6 +48,9 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         }
         if (id == R.id.lessonbutton) {
             startActivity(new Intent(this, FullscreenActivity.class));
+        }
+        if (id == R.id.button8) {
+            startActivity(new Intent(this, Forum.class));
         }
     }
 }

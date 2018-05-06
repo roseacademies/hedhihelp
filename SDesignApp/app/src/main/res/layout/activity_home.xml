@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context="com.example.sarahpagnani.sdesignapp.HomeActivity">
 
 
@@ -14,33 +15,37 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:fontFamily="@font/syncopate"
+        android:fontFamily="@font/raleway"
+        android:text="@string/welcome_text"
         android:textAlignment="center"
         android:textAppearance="@android:style/TextAppearance.DialogWindowTitle"
-        android:textSize="30sp"
+        android:textColor="@android:color/white"
+        android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="@string/welcome_text" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/lessonbutton"
         android:layout_width="0dp"
-        android:layout_height="130dp"
+        android:layout_height="131dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/rounded_button"
-        android:backgroundTint="@color/green"
+        android:backgroundTint="@color/beige"
+        android:fontFamily="@font/raleway_bold"
         android:onClick="sendMessage"
+        android:text="@string/lessons_module"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/button7"
         app:layout_constraintEnd_toStartOf="@+id/calendar_button"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
-        android:text="@string/lessons_module" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <Button
         android:id="@+id/calendar_button"
@@ -49,11 +54,14 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:background="@drawable/rounded_button"
-        android:backgroundTint="@android:color/holo_orange_dark"
+        android:backgroundTint="@color/coral"
+        android:fontFamily="@font/raleway_bold"
+        android:text="@string/calendar_module"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/lessonbutton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/lessonbutton"
-        android:text="@string/calendar_module" />
+        app:layout_constraintStart_toEndOf="@+id/lessonbutton" />
 
     <Button
         android:id="@+id/button7"
@@ -64,12 +72,15 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/rounded_button"
-        android:backgroundTint="@color/lorange"
+        android:backgroundTint="@color/blue"
+        android:fontFamily="@font/raleway_bold"
+        android:text="@string/resources_module"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/button9"
         app:layout_constraintEnd_toStartOf="@+id/button8"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lessonbutton"
-        android:text="@string/resources_module" />
+        app:layout_constraintTop_toBottomOf="@+id/lessonbutton" />
 
     <Button
         android:id="@+id/button8"
@@ -78,11 +89,15 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:background="@drawable/rounded_button"
-        android:backgroundTint="@color/green"
+        android:backgroundTint="@color/beige"
+        android:fontFamily="@font/raleway_bold"
+        android:onClick="sendMessage"
+        android:text="@string/forum_module"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/button7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button7"
-        android:text="@string/forum_module" />
+        app:layout_constraintStart_toEndOf="@+id/button7" />
 
     <Button
         android:id="@+id/button9"
@@ -93,12 +108,15 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/rounded_button"
-        android:backgroundTint="@android:color/holo_orange_dark"
+        android:backgroundTint="@color/coral"
+        android:fontFamily="@font/raleway_bold"
+        android:text="@string/settings_module"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button10"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button7"
-        android:text="@string/settings_module" />
+        app:layout_constraintTop_toBottomOf="@+id/button7" />
 
     <Button
         android:id="@+id/button10"
@@ -107,9 +125,12 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:background="@drawable/rounded_button"
-        android:backgroundTint="@color/lorange"
+        android:backgroundTint="@color/blue"
+        android:fontFamily="@font/raleway_bold"
+        android:text="@string/about_module"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/button9"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button9"
-        android:text="@string/about_module" />
+        app:layout_constraintStart_toEndOf="@+id/button9" />
 </android.support.constraint.ConstraintLayout>

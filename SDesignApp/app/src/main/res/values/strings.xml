@@ -1,13 +1,13 @@
 <resources>
     <!-- Strings related to main screen -->
-    <string name="app_name">Angavu\'s Story</string>
+    <string name="app_name">Hedhi Help</string>
     <string name="title_activity_login">Sign In</string>
     <string name="sign_out">Sign Out</string>
     <string name="account_crete_prompt">Don\'t have an account?</string>
 
 
     <!-- Strings related to home screen -->
-    <string name="welcome_text">Welcome, User!</string>
+    <string name="welcome_text">Welcome!</string>
     <string name="lessons_module">Lessons</string>
     <string name="calendar_module">Calendar</string>
     <string name="resources_module">Resources</string>
@@ -68,5 +68,7 @@
     <string name="title_activity_fullscreen">ModuleActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="skip">Skip?</string>
+    <string name="title_activity_forum">Forum</string>
 
 </resources>
