@@ -11,6 +11,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     public static final String EXTRA_MESSAGE = "com.example.SDesignApp.MESSAGE";
     Button mCalendarButton;
     Button mForumButton;
+    Button mClinicsButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,9 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
         mForumButton = (Button) findViewById(R.id.button8);
         mForumButton.setOnClickListener(this);
+
+        mClinicsButton = (Button) findViewById(R.id.button7);
+        mClinicsButton.setOnClickListener(this);
 
         // Get the Intent that started this activity and extract the string
         Intent intent = getIntent();
@@ -48,6 +52,9 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         }
         if (id == R.id.lessonbutton) {
             startActivity(new Intent(this, FullscreenActivity.class));
+        }
+        if (id == R.id.button7) {
+            startActivity(new Intent(this, ClinicsActivity.class));
         }
         if (id == R.id.button8) {
             startActivity(new Intent(this, Forum.class));
