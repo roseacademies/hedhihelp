@@ -21,7 +21,9 @@ import com.example.sarahpagnani.sdesignapp.PeriodData.PeriodTable;
 import sun.bob.mcalendarview.MCalendarView;
 import sun.bob.mcalendarview.listeners.OnDateClickListener;
 import sun.bob.mcalendarview.vo.DateData;
+import sun.bob.mcalendarview.vo.MarkedDates;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Calendar;
 
@@ -131,24 +133,48 @@ public class CalendarActivity extends AppCompatActivity implements View.OnClickL
     public void highlightLengthDays() {
         Calendar cal = Calendar.getInstance();
         cal.setTime(startDate);
+        Calendar keepStart = cal;
         int i = 0;
         do {
             mCalendar.markDate(cal.get(Calendar.YEAR), cal.get(Calendar.MONTH)+1, cal.get(Calendar.DAY_OF_MONTH));
             cal.add(Calendar.DAY_OF_YEAR, 1);
             i++;
         } while (i <= length);
+        keepStart.add(Calendar.DAY_OF_YEAR, gap);
+        i = 0;
+        do {
+            mCalendar.markDate(keepStart.get(Calendar.YEAR), keepStart.get(Calendar.MONTH)+1, keepStart.get(Calendar.DAY_OF_MONTH));
+            cal.add(Calendar.DAY_OF_YEAR, 1);
+            i++;
+        } while (i <= length);
+
+    }
+
+    public void clearAllSelected() {
+        MarkedDates marked = mCalendar.getMarkedDates();
+        ArrayList<DateData> dates= marked.getAll();
+        for (DateData d : dates) {
+            mCalendar.unMarkDate(d);
+        }
     }
 
     public void unhighlightThem() {
         Calendar cal = Calendar.getInstance();
         cal.setTime(startDate);
+        Calendar keepStart = cal;
         int i = 0;
         do {
             mCalendar.unMarkDate(cal.get(Calendar.YEAR), cal.get(Calendar.MONTH)+1, cal.get(Calendar.DAY_OF_MONTH));
             cal.add(Calendar.DAY_OF_YEAR, 1);
             i++;
         } while (i <= length);
-
+        cal.add(Calendar.DAY_OF_YEAR, gap);
+        i=0;
+        do {
+            mCalendar.unMarkDate(keepStart.get(Calendar.YEAR), keepStart.get(Calendar.MONTH)+1, keepStart.get(Calendar.DAY_OF_MONTH));
+            cal.add(Calendar.DAY_OF_YEAR, 1);
+            i++;
+        } while (i <= length);
     }
 
     @Override
@@ -299,7 +325,6 @@ public class CalendarActivity extends AppCompatActivity implements View.OnClickL
         );
 
         int deletedRows = db.delete(PeriodTable.PeriodEntry.TABLE_NAME, selection, selectionArgs);
-//        Toast.makeText(CalendarActivity.this, "This many rows: " + String.valueOf(deletedRows), Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -310,24 +335,34 @@ public class CalendarActivity extends AppCompatActivity implements View.OnClickL
             db = mDBHelper.getWritableDatabase();
 
             ContentValues values = new ContentValues();
-            startDate = new Date();
+            if (prev != null){
+                Calendar c = Calendar.getInstance();
+                c.set(prev.getYear(), prev.getMonth()-1, prev.getDay());
+                startDate = c.getTime();
+            }
+            else
+                startDate = new Date();
             values.put(PeriodTable.PeriodEntry.START_DATE, startDate.getTime());
             values.put(PeriodTable.PeriodEntry.PERIOD_STATUS, 1);
             values.put(PeriodTable.PeriodEntry.END_DATE, "not yet");
             long newRowId = db.insert(PeriodTable.PeriodEntry.TABLE_NAME, null, values);
             updateUI(1);
-
         }
         if (id == R.id.StopPeriod) {
             int results = queryDB(db);
             unhighlightThem();
+            clearAllSelected();
             if (results != 0) {
                 updateDB();
             }
+            prev = null;
             updateUI(0);
         }
         if (id == R.id.PeriodSettings) {
             startActivity(new Intent(CalendarActivity.this, CalendarSettingsActivity.class));
+            Cursor cursor = getSettingsCursor();
+            gap = getGap(cursor);
+            length = getLength(cursor);
         }
     }
 }
