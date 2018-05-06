@@ -17,7 +17,6 @@ import com.example.sarahpagnani.sdesignapp.PeriodData.PeriodDbHelper;
 import com.example.sarahpagnani.sdesignapp.PeriodData.PeriodSettingsDbHelper;
 import com.example.sarahpagnani.sdesignapp.PeriodData.PeriodSettingsTable;
 import com.example.sarahpagnani.sdesignapp.PeriodData.PeriodTable;
-import com.roomorama.caldroid.CaldroidListener;
 
 import sun.bob.mcalendarview.MCalendarView;
 import sun.bob.mcalendarview.listeners.OnDateClickListener;

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <CalendarView
+    <sun.bob.mcalendarview.MCalendarView
         android:id="@+id/calendarView"
         android:layout_width="382dp"
         android:layout_height="341dp"

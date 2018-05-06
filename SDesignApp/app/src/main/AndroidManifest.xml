@@ -30,9 +30,9 @@
         <activity android:name=".HomeActivity" />
         <activity android:name=".LessonActivity" />
         <activity android:name=".ResourceActivity" />
-        <activity android:name=".PeriodActivity" />
+        <activity android:name=".CalendarActivity" />
         <activity
-            android:name=".PeriodSettingsActivity"
+            android:name=".CalendarSettingsActivity"
             android:label="@string/title_activity_period_settings"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity

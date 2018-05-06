@@ -44,7 +44,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         int id = view.getId();
         if (id == R.id.calendar_button) { // This is the button for the calendar
-            startActivity(new Intent(this, PeriodActivity.class));
+            startActivity(new Intent(this, CalendarActivity.class));
         }
         if (id == R.id.lessonbutton) {
             startActivity(new Intent(this, FullscreenActivity.class));
