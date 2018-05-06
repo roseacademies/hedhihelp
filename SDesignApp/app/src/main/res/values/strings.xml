@@ -70,4 +70,17 @@
     <string name="account_crete_prompt">Don\'t have an account?</string>
     <string name="lesson_two">Lesson Two</string>
     <string name="welcome_text">Welcome!</string>
+    <string name="title_activity_maps">Map</string>
+
+    <!--The following strings correspond to the modules-->
+    <string name="module_1_1">She is excited to go to school.</string>
+    <string name="module_1_2">Along the way she will grow and change like all the girls in this world do.</string>
+    <string name="module_1_3">She will grow taller each year.</string>
+    <string name="module_1_4">She will get older and experience more changes as she becomes a woman.</string>
+    <string name="module_1_5">She will develop breasts. It is normal for one breast to be bigger than the other.</string>
+    <string name="module_1_6">Her clothes will fit differently.</string>
+    <string name="module_1_7">Her hips will get wider.</string>
+    <string name="module_1_8">All these changes prepare her for becoming a woman, and starting her period.</string>
+    <string name="module_1_9">All her friends are changing too, some fast, some slower. </string>
+    <string name="module_1_10">Changing is beautiful. People grow differently and this is normal.</string>
 </resources>
