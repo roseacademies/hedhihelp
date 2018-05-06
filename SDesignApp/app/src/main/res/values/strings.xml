@@ -11,7 +11,7 @@
     <string name="resources_module">Resources</string>
     <string name="forum_module">Discussion</string>
     <string name="settings_module">Settings</string>
-    <string name="about_module">About Us</string>
+    <string name="about_module">Our Team</string>
 
     <!-- Strings related to lessons screen -->
     <string name="lesson_text">User\'s Lessons</string>
@@ -70,4 +70,14 @@
     <string name="account_crete_prompt">Don\'t have an account?</string>
     <string name="lesson_two">Lesson Two</string>
     <string name="welcome_text">Welcome!</string>
+    <string name="title_activity_about" translatable="false">about</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format" translatable="false">Hello World from section: %1$d</string>
+    <string name="tab_text_1">Engineers</string>
+    <string name="tab_text_2">Public Health</string>
+    <string name="tab_text_3">Graphic Design</string>
+    <string name="tab_text_4">Advisers</string>
+    <string name="title_activity_about_us" translatable="false">AboutUsActivity</string>
+
+
 </resources>

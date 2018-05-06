@@ -127,6 +127,7 @@
         android:background="@drawable/rounded_button"
         android:backgroundTint="@color/blue"
         android:fontFamily="@font/raleway_bold"
+        android:onClick="onClick"
         android:text="@string/about_module"
         android:textColor="@android:color/white"
         android:textSize="20sp"
