@@ -61,9 +61,9 @@
     <string name="title_activity_maps">Ramani</string>
 
     <!-- Strings related to Clinics -->
-    <string name="clinic_name">Jina la Kliniki</string>
-    <string name="clinic_address">Anwani</string>
-    <string name="clinic_phone">Nambari ya Simu</string>
+    <string name="clinic_name">Jina la Kliniki:</string>
+    <string name="clinic_address">Anwani:</string>
+    <string name="clinic_phone">Nambari ya Simu:</string>
 
     <!--The following strings correspond to the modules-->
     <string name="module_1_1">Anafurahi kwenda shule.</string>
