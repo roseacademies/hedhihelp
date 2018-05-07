@@ -65,6 +65,7 @@
     <string name="dummy_button" translatable="false">Dummy Button</string>
     <string name="dummy_content" translatable="false">DUMMY\nCONTENT</string>
     <string name="skip">Skip?</string>
+    <string name="choose_a_language">Choose a Language:</string>
     <string name="title_activity_forum">Discussion</string>
     <string name="account_crete_prompt">Don\'t have an account?</string>
     <string name="lesson_two">Lesson Two</string>
@@ -78,7 +79,8 @@
     <string name="tab_text_3">Graphic Design</string>
     <string name="tab_text_4">Advisers</string>
     <string name="title_activity_about_us" translatable="false">AboutUsActivity</string>
-
+    <string name="swahili">Swahili</string>
+    <string name="english" translatable="false">English</string>
 
     <string name="title_activity_maps">Map</string>
 
