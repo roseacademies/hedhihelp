@@ -168,7 +168,7 @@
             app:layout_constraintTop_toBottomOf="@+id/acct_no" />
 
         <TextView
-            android:id="@+id/acct_no"
+            android:id="@+id/skip_skip"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="32dp"
@@ -181,7 +181,8 @@
             android:textColor="@android:color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/loginbutton" />
+            app:layout_constraintTop_toBottomOf="@+id/loginbutton"
+            android:onClick="onClick"/>
 
     </LinearLayout>
 

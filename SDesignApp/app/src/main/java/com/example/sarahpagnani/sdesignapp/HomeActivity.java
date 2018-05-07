@@ -12,6 +12,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     Button mCalendarButton;
     Button mForumButton;
     Button mClinicsButton;
+    Button mAboutUs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,9 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
         mClinicsButton = (Button) findViewById(R.id.button7);
         mClinicsButton.setOnClickListener(this);
+
+        mAboutUs = (Button) findViewById(R.id.button10);
+        mAboutUs.setOnClickListener(this);
 
         // Get the Intent that started this activity and extract the string
         Intent intent = getIntent();
@@ -58,6 +62,9 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         }
         if (id == R.id.button8) {
             startActivity(new Intent(this, Forum.class));
+        }
+        if (id == R.id.button10) {
+            startActivity(new Intent(this, about.class));
         }
     }
 }

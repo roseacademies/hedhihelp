@@ -12,6 +12,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //    private TextView mDetailTextView;
     private EditText mEmailField;
     private EditText mPasswordField;
+    private TextView mSkipView;
     boolean wasLoggedIn = false;
 
     @VisibleForTesting
@@ -88,10 +90,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        mStatusTextView = findViewById(R.id.status);
         mEmailField = findViewById(R.id.email_form);
         mPasswordField = findViewById(R.id.password_form);
+        mSkipView = (TextView) findViewById(R.id.skip_skip);
         //Buttons
         findViewById(R.id.loginbutton).setOnClickListener(this);
         findViewById(R.id.create_account).setOnClickListener(this);
         findViewById(R.id.logoutbutton).setOnClickListener(this);
+        mSkipView.setOnClickListener(this);
         // findViewById(R.id.verify_email_button).setOnClickListener(this); //<- this might be good to have later
 
         mAuth = FirebaseAuth.getInstance();
@@ -195,6 +199,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //            createAccount(mEmailField.getText().toString(), mPasswordField.getText().toString());
         } else if (i == R.id.logoutbutton) {
             signOut();
+        } else if (i == R.id.skip_skip) {
+            startActivity(new Intent(this, HomeActivity.class));
         }
     }
 }
