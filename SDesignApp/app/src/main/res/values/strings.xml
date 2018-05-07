@@ -85,9 +85,9 @@
     <string name="title_activity_maps">Map</string>
 
     <!-- Strings related to Clinics -->
-    <string name="clinic_name">Clinic Name</string>
-    <string name="clinic_address">Address</string>
-    <string name="clinic_phone">Phone Number</string>
+    <string name="clinic_name">Clinic Name:</string>
+    <string name="clinic_address">Address:</string>
+    <string name="clinic_phone">Phone Number:</string>
 
     <!--The following strings correspond to the modules-->
     <string name="module_1_1">She is excited to go to school.</string>
