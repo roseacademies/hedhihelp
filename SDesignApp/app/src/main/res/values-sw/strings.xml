@@ -12,7 +12,7 @@
     <string name="lesson_text">Masomo ya Mtumiaji</string>
     <string name="lesson_one">Somo La Kwanza</string>
     <string name="lesson_two">Somo Mbili</string>
-    <string name="lesson_future">Inakuja hivi karibuni...</string>
+    <string name="lesson_future">Inakuja hivi karibuni &#8230;</string>
     <string name="label_email">Barua Pepe:</string>
     <string name="prompt_email">Barua Pepe</string>
     <string name="label_password">Nenosiri:</string>
@@ -51,10 +51,25 @@
     <string name="skip">Kufanya Baadaye?</string>
     <string name="title_activity_forum">Majadiliano</string>
     <string name="about_module">Timu Yetu</string>
-    <string name="welcome_text">Kuwakaribisha!</string>
     <string name="action_settings">Mipangilio</string>
     <string name="tab_text_1">Wahandisi</string>
     <string name="tab_text_2">Afya Ya Umma</string>
     <string name="tab_text_3">Kubuni Graphic</string>
     <string name="tab_text_4">Washauri</string>
+
+    <string name="welcome_text">Karibu!</string>
+    <string name="title_activity_maps">Ramani</string>
+
+    <!--The following strings correspond to the modules-->
+    <string name="module_1_1">Anafurahi kwenda shule.</string>
+    <string name="module_1_2">Unapoendelea, atakua na kubadili kama wasichana wote duniani wanavyofanya.</string>
+    <string name="module_1_3">Ataongezeka kwa urefu kila mwaka.</string>
+    <string name="module_1_4">Ataona mabadiliko zaidi wakati akikua na kuwa mwanamke.</string>
+    <string name="module_1_5">Ataendeleza kifua. Ni kawaida kwa kifua kimoja kuwa kikubwa zaidi kuliko kingine.</string>
+    <string name="module_1_6">Anaweza kuhitaji nguo mpya.</string>
+    <string name="module_1_7">Yake makalio utapata pana.</string>
+    <string name="module_1_8">Mabadiliko haya yote hufanya mwili wake uwe tayari kuwa wanawake, na kwa ajili ya hedhi.</string>
+    <string name="module_1_9">Marafiki zake wote pia hubadilisha, baadhi ya haraka, polepole. </string>
+    <string name="module_1_10">Kubadilisha ni nzuri. Watu hukua tofauti na hii ni ya kawaida.</string>
+
 </resources>
