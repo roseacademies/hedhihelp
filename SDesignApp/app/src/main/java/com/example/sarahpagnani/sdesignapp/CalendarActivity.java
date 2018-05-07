@@ -337,6 +337,11 @@ public class CalendarActivity extends AppCompatActivity implements View.OnClickL
         if (id == R.id.PeriodStatus) {
             db = mDBHelper.getWritableDatabase();
 
+            Cursor cursor = getSettingsCursor();
+            gap = getGap(cursor);
+            length = getLength(cursor);
+            cursor.close();
+
             ContentValues values = new ContentValues();
             if (prev != null){
                 Calendar c = Calendar.getInstance();

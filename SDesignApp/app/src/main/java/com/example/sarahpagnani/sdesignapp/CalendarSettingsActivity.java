@@ -26,6 +26,7 @@ public class CalendarSettingsActivity extends AppCompatActivity implements View.
     EditText lengthBetweenPeriods;
     Button saveButton;
     Button cancelButton;
+    Button restoreDefaults;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +37,7 @@ public class CalendarSettingsActivity extends AppCompatActivity implements View.
         lengthBetweenPeriods = (EditText) findViewById(R.id.length_between_periods_form);
         saveButton = (Button) findViewById(R.id.save_button);
         cancelButton = (Button) findViewById(R.id.cancel_button);
-
+        restoreDefaults = (Button) findViewById(R.id.restore_defaults);
 
         mDBHelper = new PeriodSettingsDbHelper(this);
 
@@ -52,6 +53,7 @@ public class CalendarSettingsActivity extends AppCompatActivity implements View.
         periodLength.setText(String.valueOf(res.getLength()));
         lengthBetweenPeriods.setText(String.valueOf(res.getGap()));
 
+        restoreDefaults.setOnClickListener(this);
         saveButton.setOnClickListener(this);
         cancelButton.setOnClickListener(this);
     }
@@ -125,13 +127,7 @@ public class CalendarSettingsActivity extends AppCompatActivity implements View.
         SQLiteDatabase db = mDBHelper.getReadableDatabase();
         // First we check if there is a row already there
         if (isSet(db)) {
-            // If there is, we nuke it
-            db = mDBHelper.getWritableDatabase();
-            // clean up the db, we should only have one entry
-            String selection = PeriodSettingsTable.PeriodSettingsEntry.isSet + " LIKE ?";
-            String[] selectionArgs = {"1"};
-            int deletedRows = db.delete(PeriodSettingsTable.PeriodSettingsEntry.TABLE_NAME, selection, selectionArgs);
-//            Toast.makeText(CalendarSettingsActivity.this, "This many rows: " + String.valueOf(deletedRows), Toast.LENGTH_SHORT).show();
+            deleteRow(db);
         }
         // If there isn't, let's make one! Geez.
         db = mDBHelper.getWritableDatabase();
@@ -142,19 +138,29 @@ public class CalendarSettingsActivity extends AppCompatActivity implements View.
         long newRowId = db.insert(PeriodSettingsTable.PeriodSettingsEntry.TABLE_NAME, null, values);
     }
 
+    public void deleteRow(SQLiteDatabase db) {
+        // If there is, we nuke it
+//        db = mDBHelper.getWritableDatabase();
+        // clean up the db, we should only have one entry
+        String selection = PeriodSettingsTable.PeriodSettingsEntry.isSet + " LIKE ?";
+        String[] selectionArgs = {"1"};
+        int deletedRows = db.delete(PeriodSettingsTable.PeriodSettingsEntry.TABLE_NAME, selection, selectionArgs);
+//            Toast.makeText(CalendarSettingsActivity.this, "This many rows: " + String.valueOf(deletedRows), Toast.LENGTH_SHORT).show();
+    }
+
     public void saveSettings() {
-//        SQLiteDatabase db = mDBHelper.getWritableDatabase();
-        if (periodLength == null)
-            createRow(0,DEFAULT_GAP);
-        else if (lengthBetweenPeriods == null)
-            createRow(DEFAULT_LENGTH,0);
-        else
-            createRow(Integer.parseInt(lengthBetweenPeriods.getText().toString()), Integer.parseInt(periodLength.getText().toString()));
+        SQLiteDatabase db = mDBHelper.getWritableDatabase();
+        deleteRow(db);
+        createRow(Integer.parseInt(lengthBetweenPeriods.getText().toString()), Integer.parseInt(periodLength.getText().toString()));
     }
 
     @Override
     public void onClick(View v) {
         int id = v.getId();
+        if (id == R.id.restore_defaults) {
+            periodLength.setText("7");
+            lengthBetweenPeriods.setText("28");
+        }
         if (id == R.id.save_button) {
             saveSettings();
             finish();
