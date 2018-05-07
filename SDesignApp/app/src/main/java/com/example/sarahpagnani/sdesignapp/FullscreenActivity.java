@@ -98,15 +98,14 @@ public class FullscreenActivity extends AppCompatActivity implements View.OnClic
     };
 
     public void setImageArray(int module_number) {
-        int maxImages=20;
         if (module_number == 1) {
-            maxImages = 10;
+            module_max = 10;
         }
         if (module_number == 2)
-            maxImages = 12;
-        images = new Integer[maxImages];
-        texts = new int[maxImages];
-        for (int i=0;i < maxImages;i++) {
+            module_max = 12;
+        images = new Integer[module_max];
+        texts = new int[module_max];
+        for (int i=0;i < module_max;i++) {
             images[i] = getResources().getIdentifier("module_" +
                             String.valueOf(module_number) + "_" + String.valueOf(i+1),
                     "drawable", getPackageName());
@@ -223,9 +222,9 @@ public class FullscreenActivity extends AppCompatActivity implements View.OnClic
                 image_count += 1;
             }
             else if (x < (height/2)) {
-                image_count-=1;
+                image_count -= 1;
             }
-            if (image_count <= module_max && image_count >= 0)
+            if (image_count < module_max && image_count >= 0)
                 updateUI();
             else
                 finish();
