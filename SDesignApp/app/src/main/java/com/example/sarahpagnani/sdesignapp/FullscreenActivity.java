@@ -134,7 +134,7 @@ public class FullscreenActivity extends AppCompatActivity implements View.OnClic
 
         // Set up the user interaction to manually show or hide the system UI.
         mContentView.setOnClickListener(this);
-
+        findViewById(R.id.end_module).setOnClickListener(this);
         // Upon interacting with UI controls, delay any scheduled hide()
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
@@ -214,6 +214,10 @@ public class FullscreenActivity extends AppCompatActivity implements View.OnClic
         int width = displayMetrics.widthPixels;
 
         int i = v.getId();
+        if (v == findViewById(R.id.end_module)) {
+            finish();
+        }
+
         if (v == mContentView) {
             float x = lastTouchDownXY[0];
             float y = lastTouchDownXY[1];

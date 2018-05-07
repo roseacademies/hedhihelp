@@ -76,5 +76,22 @@
     <string name="module_1_8">Mabadiliko haya yote hufanya mwili wake uwe tayari kuwa wanawake, na kwa ajili ya hedhi.</string>
     <string name="module_1_9">Marafiki zake wote pia hubadilisha, baadhi ya haraka, polepole. </string>
     <string name="module_1_10">Kubadilisha ni nzuri. Watu hukua tofauti na hii ni ya kawaida.</string>
+    <string name="module_1_11">  </string>
+
+    <string name="module_2_1"> </string>
+    <string name="module_2_2"> </string>
+    <string name="module_2_3"> </string>
+    <string name="module_2_4"> </string>
+    <string name="module_2_5"> </string>
+    <string name="module_2_6"> </string>
+    <string name="module_2_7"> </string>
+    <string name="module_2_8"> </string>
+    <string name="module_2_9"> </string>
+    <string name="module_2_10"> </string>
+    <string name="module_2_11"> </string>
+    <string name="module_2_12"> </string>
+
+
+    <string name="quit_module">Ondoa</string>
 
 </resources>

@@ -4,6 +4,20 @@
     android:layout_height="match_parent"
     android:background="#0099cc"
     tools:context="com.example.sarahpagnani.sdesignapp.FullscreenActivity">
+    <Button
+        android:id="@+id/end_module"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/modules_image"
+
+        android:layout_marginLeft="2dp"
+        android:layout_marginStart="2dp"
+        android:background="@drawable/rounded_button"
+        android:fontFamily="@font/raleway_bold"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:text="@string/quit_module"
+        android:textColor="@color/green" />
 
     <ImageView
         android:id="@+id/modules_image"
@@ -46,6 +60,9 @@
             tools:ignore="UselessParent">
 
         </LinearLayout>
+
+
+
     </FrameLayout>
 
 </RelativeLayout>
