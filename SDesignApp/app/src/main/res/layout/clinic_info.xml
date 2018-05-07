@@ -7,30 +7,57 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/clinic_name_title"
+        android:layout_width="384dp"
+        android:layout_height="32dp"
+        android:text="@string/clinic_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/clinic_name"
         android:layout_width="384dp"
         android:layout_height="32dp"
-        android:text="Clinic Name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="32dp"
+        android:text="@string/clinic_name"
+        app:layout_constraintStart_toStartOf="@id/clinic_name_title"
+        app:layout_constraintTop_toTopOf="@id/clinic_name_title" />
+
+    <TextView
+        android:id="@+id/clinic_address_title"
+        android:layout_width="384dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/clinic_address"
+        app:layout_constraintStart_toStartOf="@id/clinic_name"
+        app:layout_constraintTop_toTopOf="@id/clinic_name" />
 
     <TextView
         android:id="@+id/clinic_address"
         android:layout_width="383dp"
         android:layout_height="40dp"
         android:layout_marginTop="32dp"
-        android:text="Clinic Address"
-        app:layout_constraintStart_toStartOf="@id/clinic_name"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/clinic_address"
+        app:layout_constraintStart_toStartOf="@id/clinic_address_title"
+        app:layout_constraintTop_toTopOf="@id/clinic_address_title" />
+
+    <TextView
+        android:id="@+id/clinic_phone_title"
+        android:layout_width="384dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/clinic_phone"
+        app:layout_constraintStart_toStartOf="@id/clinic_address"
+        app:layout_constraintTop_toTopOf="@id/clinic_address" />
 
     <TextView
         android:id="@+id/clinic_phone"
         android:layout_width="383dp"
         android:layout_height="40dp"
-        android:layout_marginTop="72dp"
-        android:text="Clinic Phone"
-        app:layout_constraintStart_toStartOf="@id/clinic_address"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="32dp"
+        android:text="@string/clinic_phone"
+        app:layout_constraintStart_toStartOf="@id/clinic_phone_title"
+        app:layout_constraintTop_toTopOf="@id/clinic_phone_title" />
 
     <Button
         android:id="@+id/directions_button"
