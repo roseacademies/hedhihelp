@@ -89,7 +89,7 @@ public class CalendarSettingsActivity extends AppCompatActivity implements View.
         cursor.close();
         result = new Settings(length, gap);
 
-        Toast.makeText(CalendarSettingsActivity.this, "Length: " + String.valueOf(result.getLength()) + " Gap: " + String.valueOf(result.getGap()), Toast.LENGTH_SHORT).show();
+//        Toast.makeText(CalendarSettingsActivity.this, "Length: " + String.valueOf(result.getLength()) + " Gap: " + String.valueOf(result.getGap()), Toast.LENGTH_SHORT).show();
 
         return result;
     }

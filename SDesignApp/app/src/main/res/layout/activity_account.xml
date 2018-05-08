@@ -192,60 +192,60 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/create_account_name_form" />
 
-            <TextView
-                android:id="@+id/create_account_language"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/raleway"
-                android:text="@string/choose_a_language"
-                android:textAlignment="viewStart"
-                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
-                android:textColor="@android:color/white"
-                app:layout_constraintEnd_toStartOf="@+id/create_account_age_form"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/create_account_name_text" />
+            <!--<TextView-->
+                <!--android:id="@+id/create_account_language"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginEnd="16dp"-->
+                <!--android:layout_marginStart="16dp"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:fontFamily="@font/raleway"-->
+                <!--android:text="@string/choose_a_language"-->
+                <!--android:textAlignment="viewStart"-->
+                <!--android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"-->
+                <!--android:textColor="@android:color/white"-->
+                <!--app:layout_constraintEnd_toStartOf="@+id/create_account_age_form"-->
+                <!--app:layout_constraintStart_toStartOf="parent"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/create_account_name_text" />-->
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center">
+            <!--<LinearLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center">-->
 
-                <Button
-                    android:id="@+id/create_account_language_button_swahili"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/rounded_button"
-                    android:fontFamily="@font/raleway_bold"
-                    android:onClick="create_account"
-                    android:text="@string/swahili"
-                    android:textColor="@color/green"
+                <!--<Button-->
+                    <!--android:id="@+id/create_account_language_button_swahili"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_marginStart="12dp"-->
+                    <!--android:layout_marginTop="8dp"-->
+                    <!--android:background="@drawable/rounded_button"-->
+                    <!--android:fontFamily="@font/raleway_bold"-->
+                    <!--android:onClick="create_account"-->
+                    <!--android:text="@string/swahili"-->
+                    <!--android:textColor="@color/green"-->
 
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toEndOf="@id/create_account_language_button_english"
-                    app:layout_constraintTop_toBottomOf="@+id/create_account_age_form" />
+                    <!--app:layout_constraintHorizontal_bias="0.0"-->
+                    <!--app:layout_constraintStart_toEndOf="@id/create_account_language_button_english"-->
+                    <!--app:layout_constraintTop_toBottomOf="@+id/create_account_age_form" />-->
 
-                <Button
-                    android:id="@+id/create_account_language_button_english"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/rounded_button"
-                    android:fontFamily="@font/raleway_bold"
-                    android:onClick="create_account"
-                    android:text="@string/english"
-                    android:textColor="@color/green"
-                    app:layout_constraintEnd_toStartOf="@+id/create_account_language_button_swahili"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/create_account_age_form" />
+                <!--<Button-->
+                    <!--android:id="@+id/create_account_language_button_english"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_marginStart="12dp"-->
+                    <!--android:layout_marginTop="8dp"-->
+                    <!--android:background="@drawable/rounded_button"-->
+                    <!--android:fontFamily="@font/raleway_bold"-->
+                    <!--android:onClick="create_account"-->
+                    <!--android:text="@string/english"-->
+                    <!--android:textColor="@color/green"-->
+                    <!--app:layout_constraintEnd_toStartOf="@+id/create_account_language_button_swahili"-->
+                    <!--app:layout_constraintHorizontal_bias="0.0"-->
+                    <!--app:layout_constraintStart_toStartOf="parent"-->
+                    <!--app:layout_constraintTop_toBottomOf="@+id/create_account_age_form" />-->
 
-            </LinearLayout>
+            <!--</LinearLayout>-->
 
             <Button
                 android:id="@+id/create_account_button"

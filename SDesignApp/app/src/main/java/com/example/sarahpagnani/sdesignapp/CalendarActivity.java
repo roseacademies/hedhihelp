@@ -280,7 +280,7 @@ public class CalendarActivity extends AppCompatActivity implements View.OnClickL
 
         if (cursor.isAfterLast()) return -1;
         long startDate = cursor.getLong(cursor.getColumnIndex(PeriodTable.PeriodEntry.START_DATE));
-        Toast.makeText(CalendarActivity.this, "START DATE: " + String.valueOf(startDate), Toast.LENGTH_SHORT).show();
+//        Toast.makeText(CalendarActivity.this, "START DATE: " + String.valueOf(startDate), Toast.LENGTH_SHORT).show();
         cursor.close();
         return startDate;
     }
