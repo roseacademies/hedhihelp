@@ -17,7 +17,8 @@
         android:gravity="center"
         android:onClick="onClick"
         android:text="@string/quit_module"
-        android:textColor="@color/green" />
+        android:backgroundTint="@color/green"
+        android:textColor="@android:color/white" />
 
     <ImageView
         android:id="@+id/modules_image"

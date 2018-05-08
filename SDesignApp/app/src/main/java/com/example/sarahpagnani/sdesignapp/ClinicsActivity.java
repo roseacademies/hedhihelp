@@ -19,8 +19,8 @@ public class ClinicsActivity extends AppCompatActivity implements AdapterView.On
 
 
 
-    private Clinic[] clinics = new Clinic[10];
-    private String[] clinicNames = new String[10];
+    private Clinic[] clinics = new Clinic[11];
+    private String[] clinicNames = new String[11];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,15 +76,16 @@ public class ClinicsActivity extends AppCompatActivity implements AdapterView.On
                 "1st Floor, Al Imran Plaza Oginga Odinga Road, Kisumu",
                 "057 – 2024892",
                 "https://www.google.com/maps/place/AAR+Healthcare+Kisumu+Outpatient+Centre/@-0.1023255,34.7500273,17z/data=!4m8!1m2!2m1!1sAAR+Healthcare+1st+Floor,+Al+Imran+Plaza+Oginga+Odinga+Road,+Kisumu!3m4!1s0x0:0x48bd23109b329d7d!8m2!3d-0.1000832!4d34.7510882");
+        clinics[10] = new Clinic("","","","");
 
-        for (int i = 0; i < 10; i++){
+        for (int i = 0; i < 11; i++){
             clinicNames[i] = clinics[i].getName();
         }
     }
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-        Log.i("HelloListView", "You clicked Item: " + id + " at position:" + position);
+//        Log.i("HelloListView", "You clicked Item: " + id + " at position:" + position);
         Intent intent = new Intent(this, ClinicView.class);
         intent.putExtra("SelectedClinic", clinics[position]);
         startActivity(intent);
