@@ -1,11 +1,11 @@
-package com.example.sarahpagnani.sdesignapp.PeriodData;
+package org.roseacademies.hedhihelp.PeriodData;
 
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import static com.example.sarahpagnani.sdesignapp.PeriodData.PeriodTable.SQL_CREATE_ENTRIES;
+import static org.roseacademies.hedhihelp.PeriodData.PeriodTable.SQL_CREATE_ENTRIES;
 
 public class PeriodDbHelper extends SQLiteOpenHelper {
 

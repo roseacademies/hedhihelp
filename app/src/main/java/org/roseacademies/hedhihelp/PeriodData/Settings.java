@@ -1,4 +1,4 @@
-package com.example.sarahpagnani.sdesignapp.PeriodData;
+package org.roseacademies.hedhihelp.PeriodData;
 
 public class Settings {
     private int length;

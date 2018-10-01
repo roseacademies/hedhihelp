@@ -1,4 +1,4 @@
-package com.example.sarahpagnani.sdesignapp;
+package org.roseacademies.hedhihelp;
 
 import android.content.ContentValues;
 import android.database.Cursor;
@@ -12,9 +12,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.sarahpagnani.sdesignapp.PeriodData.PeriodSettingsDbHelper;
-import com.example.sarahpagnani.sdesignapp.PeriodData.PeriodSettingsTable;
-import com.example.sarahpagnani.sdesignapp.PeriodData.Settings;
+import org.roseacademies.hedhihelp.PeriodData.PeriodSettingsDbHelper;
+import org.roseacademies.hedhihelp.PeriodData.PeriodSettingsTable;
+import org.roseacademies.hedhihelp.PeriodData.Settings;
 
 public class CalendarSettingsActivity extends AppCompatActivity implements View.OnClickListener {
     private static int DEFAULT_LENGTH = 7;

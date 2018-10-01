@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:893831655659:android:e9e3447a3aaa58aa",
         "android_client_info": {
-          "package_name": "com.example.sarahpagnani.sdesignapp"
+          "package_name": "org.roseacademies.hedhihelp"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "893831655659-ka85v0gpeg826b1e2jnt0tu0ivpq9bto.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.sarahpagnani.sdesignapp",
+            "package_name": "org.roseacademies.hedhihelp",
             "certificate_hash": "92d46f4c46529708ff8ea6af4591b22d8c9f786c"
           }
         },

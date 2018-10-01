@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context="com.example.sarahpagnani.sdesignapp.LessonActivity">
+    tools:context="org.roseacademies.hedhihelp.LessonActivity">
 
     <TextView
         android:id="@+id/textView7"

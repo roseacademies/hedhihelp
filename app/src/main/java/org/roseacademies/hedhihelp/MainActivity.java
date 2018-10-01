@@ -1,4 +1,4 @@
-package com.example.sarahpagnani.sdesignapp;
+package org.roseacademies.hedhihelp;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -25,7 +25,7 @@ import static android.content.ContentValues.TAG;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-    public static final String EXTRA_MESSAGE = "com.example.SDesignApp.MESSAGE";
+    public static final String EXTRA_MESSAGE = "org.roseacademies.hedhihelp.MESSAGE";
     private FirebaseAuth mAuth;
 //    private TextView mStatusTextView;
 //    private TextView mDetailTextView;

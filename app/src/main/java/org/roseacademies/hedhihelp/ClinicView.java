@@ -1,4 +1,4 @@
-package com.example.sarahpagnani.sdesignapp;
+package org.roseacademies.hedhihelp;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,9 +9,9 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.sarahpagnani.sdesignapp.ClinicResources.Clinic;
+import org.roseacademies.hedhihelp.ClinicResources.Clinic;
 
-import com.example.sarahpagnani.sdesignapp.R;
+import org.roseacademies.hedhihelp.R;
 
 /*
  * Created by SarekSoteloJimenez on 5/5/18.

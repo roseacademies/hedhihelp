@@ -1,4 +1,4 @@
-package com.example.sarahpagnani.sdesignapp;
+package org.roseacademies.hedhihelp;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener{
-    public static final String EXTRA_MESSAGE = "com.example.SDesignApp.MESSAGE";
+    public static final String EXTRA_MESSAGE = "org.roseacademies.hedhihelp.MESSAGE";
     Button mCalendarButton;
     Button mForumButton;
     Button mClinicsButton;

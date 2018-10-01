@@ -1,4 +1,4 @@
-package com.example.sarahpagnani.sdesignapp;
+package org.roseacademies.hedhihelp;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.sarahpagnani.sdesignapp", appContext.getPackageName());
+        assertEquals("org.roseacademies.hedhihelp", appContext.getPackageName());
     }
 }

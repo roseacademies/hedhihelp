@@ -1,4 +1,4 @@
-package com.example.sarahpagnani.sdesignapp;
+package org.roseacademies.hedhihelp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,7 +17,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 public class about extends AppCompatActivity {
-    public static final String EXTRA_MESSAGE = "com.example.SDesignApp.MESSAGE";
+    public static final String EXTRA_MESSAGE = "org.roseacademies.hedhihelp.MESSAGE";
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide

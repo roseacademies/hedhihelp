@@ -1,4 +1,4 @@
-package com.example.sarahpagnani.sdesignapp;
+package org.roseacademies.hedhihelp;
 
 import android.content.ContentValues;
 import android.content.Intent;
@@ -12,10 +12,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.sarahpagnani.sdesignapp.PeriodData.PeriodDbHelper;
-import com.example.sarahpagnani.sdesignapp.PeriodData.PeriodSettingsDbHelper;
-import com.example.sarahpagnani.sdesignapp.PeriodData.PeriodSettingsTable;
-import com.example.sarahpagnani.sdesignapp.PeriodData.PeriodTable;
+import org.roseacademies.hedhihelp.PeriodData.PeriodDbHelper;
+import org.roseacademies.hedhihelp.PeriodData.PeriodSettingsDbHelper;
+import org.roseacademies.hedhihelp.PeriodData.PeriodSettingsTable;
+import org.roseacademies.hedhihelp.PeriodData.PeriodTable;
 
 import sun.bob.mcalendarview.MCalendarView;
 import sun.bob.mcalendarview.MarkStyle;

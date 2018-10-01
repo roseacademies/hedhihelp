@@ -1,4 +1,4 @@
-package com.example.sarahpagnani.sdesignapp.ClinicResources;
+package org.roseacademies.hedhihelp.ClinicResources;
 
 import java.io.Serializable;
 

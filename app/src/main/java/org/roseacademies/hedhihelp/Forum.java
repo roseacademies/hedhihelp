@@ -1,4 +1,4 @@
-package com.example.sarahpagnani.sdesignapp;
+package org.roseacademies.hedhihelp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,7 +11,7 @@ import android.webkit.WebView;
 import android.widget.Button;
 
 public class Forum extends AppCompatActivity {
-    public static final String EXTRA_MESSAGE = "com.example.SDesignApp.MESSAGE";
+    public static final String EXTRA_MESSAGE = "org.roseacademies.hedhihelp.MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

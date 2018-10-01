@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#0099cc"
-    tools:context="com.example.sarahpagnani.sdesignapp.FullscreenActivity">
+    tools:context="org.roseacademies.hedhihelp.FullscreenActivity">
     <Button
         android:id="@+id/end_module"
         android:layout_width="wrap_content"

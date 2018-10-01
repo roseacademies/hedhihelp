@@ -1,4 +1,4 @@
-package com.example.sarahpagnani.sdesignapp;
+package org.roseacademies.hedhihelp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.example.sarahpagnani.sdesignapp.ClinicResources.Clinic;
+import org.roseacademies.hedhihelp.ClinicResources.Clinic;
 
 /*
  * Created by SarekSoteloJimenez on 5/5/18.

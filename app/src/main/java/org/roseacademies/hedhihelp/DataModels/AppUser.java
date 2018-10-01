@@ -1,4 +1,4 @@
-package com.example.sarahpagnani.sdesignapp.DataModels;
+package org.roseacademies.hedhihelp.DataModels;
 
 /**
  * Created by SarekSoteloJimenez on 1/19/18.
