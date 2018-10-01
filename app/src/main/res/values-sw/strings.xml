@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Hedhi Help</string>
+    <string name="title_activity_login">Ingia</string>
+    <string name="sign_out">Toka</string>
+    <string name="account_crete_prompt">Hauna akaunti?</string>
+    <string name="lessons_module">Masomo</string>
+    <string name="calendar_module">Kalenda</string>
+    <string name="resources_module">Rasilimali</string>
+    <string name="forum_module">Majadiliano</string>
+    <string name="settings_module">Mipangilio</string>
+    <string name="lesson_text">Masomo ya Mtumiaji</string>
+    <string name="lesson_one">Somo La Kwanza</string>
+    <string name="lesson_two">Somo Mbili</string>
+    <string name="lesson_future">Inakuja hivi karibuni &#8230;</string>
+    <string name="label_email">Barua Pepe:</string>
+    <string name="prompt_email">Barua Pepe</string>
+    <string name="label_password">Nenosiri:</string>
+    <string name="prompt_password">Nenosiri</string>
+    <string name="signed_out">Baibai</string>
+    <string name="auth_failed">Ruhusa imeshindwa!</string>
+    <string name="action_sign_in">Ingia au usajili</string>
+    <string name="action_sign_in_short">Ingia</string>
+    <string name="google_status_fmt">Mtumiaji wa Google: %</string>
+    <string name="firebase_status_fmt">Mtumiaji wa Firebase: %s</string>
+    <string name="error_invalid_email">Anwani hii ya barua pepe ni batili.</string>
+    <string name="error_invalid_password">Nenosiri hili ni fupi mno</string>
+    <string name="error_incorrect_password">Nenosiri hili si sahihi</string>
+    <string name="error_field_required">Hii inahitajika</string>
+    <string name="loading">Inapakia</string>
+    <string name="title_home">Nyumbani</string>
+    <string name="title_dashboard">Dashibodi</string>
+    <string name="title_notifications">Arifi</string>
+    <string name="create_an_account">Fungua akaunti.</string>
+    <string name="email">Barua Pepe:</string>
+    <string name="password">Nenosiri:</string>
+    <string name="create_account">Fungua akaunti:</string>
+    <string name="name_label">Jina:</string>
+    <string name="name_prompt">Jina</string>
+    <string name="age_label">Umri:</string>
+    <string name="age_prompt">Umri</string>
+    <string name="create_account_confirm_password">Tibitisha nenosiri:</string>
+    <string name="start_period_tracking">Kuanza Kufutilia Hedhi</string>
+    <string name="stop_period_tracking">Kuacha Kufuatilia Hedhi</string>
+    <string name="settings">Mipangilio</string>
+    <string name="period_settings_title">Mipangilio Ya Hedhi</string>
+    <string name="period_length">Urefu Wa Hedhi:</string>
+    <string name="days_between_periods">Siku Kati Ya Hedhi:</string>
+    <string name="save_settings">Hifadhi Mipangilio</string>
+    <string name="restore_default_settings">Rejesha Mipangilio Ya Default</string>
+    <string name="skip">Kufanya Baadaye?</string>
+    <string name="title_activity_forum">Majadiliano</string>
+    <string name="about_module">Timu Yetu</string>
+    <string name="action_settings">Mipangilio</string>
+    <string name="tab_text_1">Wahandisi</string>
+    <string name="tab_text_2">Afya Ya Umma</string>
+    <string name="tab_text_3">Kubuni Graphic</string>
+    <string name="tab_text_4">Washauri</string>
+
+    <string name="welcome_text">Karibu!</string>
+    <string name="title_activity_maps">Ramani</string>
+
+    <!-- Strings related to Clinics -->
+    <string name="clinic_name">Jina la Kliniki:</string>
+    <string name="clinic_address">Anwani:</string>
+    <string name="clinic_phone">Nambari ya Simu:</string>
+
+    <!--The following strings correspond to the modules-->
+    <string name="module_1_1">Anafurahi kwenda shule.</string>
+    <string name="module_1_2">Unapoendelea, atakua na kubadili kama wasichana wote duniani wanavyofanya.</string>
+    <string name="module_1_3">Ataongezeka kwa urefu kila mwaka.</string>
+    <string name="module_1_4">Ataona mabadiliko zaidi wakati akikua na kuwa mwanamke.</string>
+    <string name="module_1_5">Ataendeleza kifua. Ni kawaida kwa kifua kimoja kuwa kikubwa zaidi kuliko kingine.</string>
+    <string name="module_1_6">Anaweza kuhitaji nguo mpya.</string>
+    <string name="module_1_7">Yake makalio utapata pana.</string>
+    <string name="module_1_8">Mabadiliko haya yote hufanya mwili wake uwe tayari kuwa wanawake, na kwa ajili ya hedhi.</string>
+    <string name="module_1_9">Marafiki zake wote pia hubadilisha, baadhi ya haraka, polepole. </string>
+    <string name="module_1_10">Kubadilisha ni nzuri. Watu hukua tofauti na hii ni ya kawaida.</string>
+    <string name="module_1_11">  </string>
+
+    <string name="module_2_1"> </string>
+    <string name="module_2_2"> </string>
+    <string name="module_2_3"> </string>
+    <string name="module_2_4"> </string>
+    <string name="module_2_5"> </string>
+    <string name="module_2_6"> </string>
+    <string name="module_2_7"> </string>
+    <string name="module_2_8"> </string>
+    <string name="module_2_9"> </string>
+    <string name="module_2_10"> </string>
+    <string name="module_2_11"> </string>
+    <string name="module_2_12"> </string>
+
+
+    <string name="quit_module">Ondoa</string>
+
+</resources>
