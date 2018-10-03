@@ -88,22 +88,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // Views
 //        mStatusTextView = findViewById(R.id.status);
-        mEmailField = findViewById(R.id.email_form);
-        mPasswordField = findViewById(R.id.password_form);
-        mSkipView = (TextView) findViewById(R.id.skip_skip);
+//        mEmailField = findViewById(R.id.email_form);
+//        mPasswordField = findViewById(R.id.password_form);
+//        mSkipView = (TextView) findViewById(R.id.skip_skip);
         //Buttons
-        findViewById(R.id.loginbutton).setOnClickListener(this);
-        findViewById(R.id.create_account).setOnClickListener(this);
-        findViewById(R.id.logoutbutton).setOnClickListener(this);
-        mSkipView.setOnClickListener(this);
+//        findViewById(R.id.loginbutton).setOnClickListener(this);
+//        findViewById(R.id.create_account).setOnClickListener(this);
+//        findViewById(R.id.logoutbutton).setOnClickListener(this);
+//        mSkipView.setOnClickListener(this);
         // findViewById(R.id.verify_email_button).setOnClickListener(this); //<- this might be good to have later
 
-        mAuth = FirebaseAuth.getInstance();
-        if (mAuth.getCurrentUser() != null) {
+//        mAuth = FirebaseAuth.getInstance();
+//        if (mAuth.getCurrentUser() != null) {
             Intent homeIntent = new Intent(this, HomeActivity.class);
 //            homeIntent.putExtra(EXTRA_MESSAGE, mAuth.getCurrentUser().getUid());
             startActivity(homeIntent);
-        }
+//        }
     }
 
     public static boolean isValidEmail(CharSequence target) {
@@ -116,15 +116,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onStart();
         setContentView(R.layout.activity_main);
         // Check if user is signed in (non-null) and update UI
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        mEmailField = findViewById(R.id.email_form);
-        mPasswordField = findViewById(R.id.password_form);
+//        FirebaseUser currentUser = mAuth.getCurrentUser();
+//        mEmailField = findViewById(R.id.email_form);
+//        mPasswordField = findViewById(R.id.password_form);
         //Buttons
-        findViewById(R.id.loginbutton).setOnClickListener(this);
-        findViewById(R.id.create_account).setOnClickListener(this);
-        findViewById(R.id.logoutbutton).setOnClickListener(this);
+//        findViewById(R.id.loginbutton).setOnClickListener(this);
+//        findViewById(R.id.create_account).setOnClickListener(this);
+//        findViewById(R.id.logoutbutton).setOnClickListener(this);
 //        if (currentUser!=null) startActivity(new Intent(this, HomeActivity.class));
-        updateUI(currentUser);
+//        updateUI(currentUser);
     }
 
     public void signIn(String email, String password) {
