@@ -8,7 +8,6 @@
     <!-- Strings related to home screen -->
     <string name="lessons_module">Lessons</string>
     <string name="calendar_module">Calendar</string>
-    <string name="forum_module">Discussion</string>
     <string name="settings_module">Settings</string>
     <string name="about_module">Our Team</string>
 
@@ -114,4 +113,5 @@
     <string name="module_2_6">Many girls have pain or discomfort when on their period. This is your body’s way of helping the period progress.</string>
     <string name="module_2_7">Can a girl with her period still cook food?</string>
     <string name="resources_module">Medical Facilities</string>
+    <string name="forum_module">About Rose</string>
 </resources>

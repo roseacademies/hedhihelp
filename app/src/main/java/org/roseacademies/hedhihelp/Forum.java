@@ -17,15 +17,15 @@ public class Forum extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forum);
-        String url = "https://www.facebook.com/groups/208309499770336/";
-
-        Intent intent = getIntent();
-        String message = intent.getStringExtra(HomeActivity.EXTRA_MESSAGE);
-
-        WebView webview = (WebView) findViewById(R.id.myWebView);
-        webview.setWebViewClient(new MyWebViewClient());
-        webview.getSettings().setJavaScriptEnabled(true);
-        webview.loadUrl(url);
+//        String url = "https://www.facebook.com/groups/208309499770336/";
+//
+//        Intent intent = getIntent();
+//        String message = intent.getStringExtra(HomeActivity.EXTRA_MESSAGE);
+//
+//        WebView webview = (WebView) findViewById(R.id.myWebView);
+//        webview.setWebViewClient(new MyWebViewClient());
+//        webview.getSettings().setJavaScriptEnabled(true);
+//        webview.loadUrl(url);
     }
 }
 
