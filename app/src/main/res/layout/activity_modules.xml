@@ -38,7 +38,8 @@
         android:layout_alignBottom="@id/modules_image"
         android:layout_margin="20dp"
         android:gravity="center_horizontal"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+        android:text="@string/module_2_1"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
 
     <!-- This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows. -->
