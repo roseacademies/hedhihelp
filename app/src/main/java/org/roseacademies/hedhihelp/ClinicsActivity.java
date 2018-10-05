@@ -19,8 +19,8 @@ public class ClinicsActivity extends AppCompatActivity implements AdapterView.On
 
 
 
-    private Clinic[] clinics = new Clinic[19];
-    private String[] clinicNames = new String[19];
+    private Clinic[] clinics = new Clinic[32];
+    private String[] clinicNames = new String[32];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -108,50 +108,65 @@ public class ClinicsActivity extends AppCompatActivity implements AdapterView.On
                 "69/71 Buganda Road Case Medical Centre 4547, Kampala Kampala",
                 "041-4250362, 031-2261123",
                 "https://www.google.com/maps/place/Case+Hospital/@0.3246552,32.5728891,17z/data=!3m1!4b1!4m5!3m4!1s0x177dbb709451390f:0xf025da6fe7cb3667!8m2!3d0.3246552!4d32.5750778");
-        clinics[18] = new Clinic("Rubaga Hospital",
-                "Rubaga Road Rubaga Hill 14130,Kampala Kampala",
-                "041-4270203/4, 041-4273692/3/4, 031-2264244/5/6/7",
-                "https://www.google.com/maps/place/Lubaga+Hospital/@0.3042221,32.5503379,17z/data=!3m1!4b1!4m5!3m4!1s0x177dbcb95a57c9af:0x56656c38af282afb!8m2!3d0.3042221!4d32.5525266");
-//        clinics[19] = new Clinic("Bulamu Medical Clinic (Open 24 hours)",
-//                "Edward Ave, Masaka, Uganda",
-//                "+256 758 155347",
-//                "https://www.google.com/maps/place/Bulamu+Medical+Clinic/@-0.3457797,31.7358676,17z/data=!4m8!1m2!2m1!1sBulamu+Medical+Clinic+(Open+24+hours)!3m4!1s0x19d78edc6aa6ddbf:0xc2477297732d0c25!8m2!3d-0.3457797!4d31.7380563");
-//        clinics[20] = new Clinic("Police Health Center III (Opens 8AM)",
-//                "Masaka Pollice Barracks, Masaka P.O.Box 10, Masaka, Uganda",
-//                "+256 703 337301",
-//                "https://www.google.com/maps/place/Police+Health+Center+III/@-0.3443506,31.7322385,17z/data=!3m1!4b1!4m5!3m4!1s0x19d78edb054985cd:0x8700762db41b7692!8m2!3d-0.3443506!4d31.7344272");
-//        clinics[21] = new Clinic("Kitovu Health Care Complex",
-//                "P.O.Box 413, Masaka, Uganda",
-//                "+256 41 4285481",
-//                "https://www.google.com/maps/place/Lubaga+Hospital/@0.3042221,32.5503379,17z/data=!3m1!4b1!4m5!3m4!1s0x177dbcb95a57c9af:0x56656c38af282afb!8m2!3d0.3042221!4d32.5525266");
-//        clinics[9] = new Clinic("Rubaga Hospital",
-//                "Rubaga Road Rubaga Hill 14130,Kampala Kampala",
-//                "041-4270203/4, 041-4273692/3/4, 031-2264244/5/6/7",
-//                "https://www.google.com/maps/place/Lubaga+Hospital/@0.3042221,32.5503379,17z/data=!3m1!4b1!4m5!3m4!1s0x177dbcb95a57c9af:0x56656c38af282afb!8m2!3d0.3042221!4d32.5525266");
-//        clinics[9] = new Clinic("Rubaga Hospital",
-//                "Rubaga Road Rubaga Hill 14130,Kampala Kampala",
-//                "041-4270203/4, 041-4273692/3/4, 031-2264244/5/6/7",
-//                "https://www.google.com/maps/place/Lubaga+Hospital/@0.3042221,32.5503379,17z/data=!3m1!4b1!4m5!3m4!1s0x177dbcb95a57c9af:0x56656c38af282afb!8m2!3d0.3042221!4d32.5525266");
-//        clinics[9] = new Clinic("Rubaga Hospital",
-//                "Rubaga Road Rubaga Hill 14130,Kampala Kampala",
-//                "041-4270203/4, 041-4273692/3/4, 031-2264244/5/6/7",
-//                "https://www.google.com/maps/place/Lubaga+Hospital/@0.3042221,32.5503379,17z/data=!3m1!4b1!4m5!3m4!1s0x177dbcb95a57c9af:0x56656c38af282afb!8m2!3d0.3042221!4d32.5525266");
-//        clinics[9] = new Clinic("Rubaga Hospital",
-//                "Rubaga Road Rubaga Hill 14130,Kampala Kampala",
-//                "041-4270203/4, 041-4273692/3/4, 031-2264244/5/6/7",
-//                "https://www.google.com/maps/place/Lubaga+Hospital/@0.3042221,32.5503379,17z/data=!3m1!4b1!4m5!3m4!1s0x177dbcb95a57c9af:0x56656c38af282afb!8m2!3d0.3042221!4d32.5525266");
-//        clinics[9] = new Clinic("Rubaga Hospital",
-//                "Rubaga Road Rubaga Hill 14130,Kampala Kampala",
-//                "041-4270203/4, 041-4273692/3/4, 031-2264244/5/6/7",
-//                "https://www.google.com/maps/place/Lubaga+Hospital/@0.3042221,32.5503379,17z/data=!3m1!4b1!4m5!3m4!1s0x177dbcb95a57c9af:0x56656c38af282afb!8m2!3d0.3042221!4d32.5525266");
-//        clinics[9] = new Clinic("Rubaga Hospital",
-//                "Rubaga Road Rubaga Hill 14130,Kampala Kampala",
-//                "041-4270203/4, 041-4273692/3/4, 031-2264244/5/6/7",
-//                "https://www.google.com/maps/place/Lubaga+Hospital/@0.3042221,32.5503379,17z/data=!3m1!4b1!4m5!3m4!1s0x177dbcb95a57c9af:0x56656c38af282afb!8m2!3d0.3042221!4d32.5525266");
-//
-//        clinics[10] = new Clinic("","","","");
+        clinics[18] = new Clinic("Bulamu Medical Clinic",
+                "Edward Ave, Masaka, Uganda",
+                "+256 758 155347",
+                "https://www.google.com/maps/place/Bulamu+Medical+Clinic/@-0.3457797,31.7358676,17z/data=!3m1!4b1!4m5!3m4!1s0x19d78edc6aa6ddbf:0xc2477297732d0c25!8m2!3d-0.3457797!4d31.7380563");
+        clinics[19] = new Clinic("Police Health Center III",
+                "Masaka Pollice Barracks, Masaka P.O.Box 10, Masaka, Uganda",
+                "+256 703 337301",
+                "https://www.google.com/maps/place/Police+Health+Center+III/@-0.3443506,31.7322385,17z/data=!3m1!4b1!4m5!3m4!1s0x19d78edb054985cd:0x8700762db41b7692!8m2!3d-0.3443506!4d31.7344272");
+        clinics[20] = new Clinic("Kitovu Health Care Complex",
+                "Located at Kitovu hill, within Masaka Municipality, P.O. BOX 524",
+                "+256 41 4285481",
+                "https://www.google.com/maps/place/Kitovu+Hospital/@-0.3442488,31.755113,17z/data=!3m1!4b1!4m5!3m4!1s0x19d78efa4685e92f:0x6959a7a70b48be92!8m2!3d-0.3442488!4d31.7573017");
+        clinics[21] = new Clinic("Kitovu Hospital",
+                "EKitovu Road, P.O.Box 413",
+                "+256 41 4285481",
+                "https://www.google.com/maps/place/Kitovu+Hospital/@-0.3442488,31.755113,17z/data=!3m1!4b1!4m5!3m4!1s0x19d78efa4685e92f:0x6959a7a70b48be92!8m2!3d-0.3442488!4d31.7573017");
+        clinics[22] = new Clinic("Masaka Regional Referral Hospital",
+                "Alex Ssebowa, Masaka, Uganda",
+                "+256 772422819",
+                "https://www.google.com/maps/place/Masaka+Regional+Referral+Hospital/@-0.3293044,31.7337434,17z/data=!3m1!4b1!4m5!3m4!1s0x19d78ebb9db30b6f:0x3735f21041acd7db!8m2!3d-0.3293044!4d31.7359321");
+        clinics[23] = new Clinic("Villa Maria Hospital",
+                "P.O.Box 32, Masaka, Masaka, Uganda",
+                "+256 758 155347",
+                "https://www.google.com/maps/place/");
+        clinics[24] = new Clinic("Masaka Vet Pharmacy",
+                "Located Plot 911, Buddu Road, P.O. Box 921, Masaka, Uganda",
+                "+256 (0)772 593 399",
+                "https://www.google.com/maps/place/");
+        clinics[25] = new Clinic("Ranana Enterprises Limited Pharmacy",
+                "P.O. Box 210,Masaka, Uganda",
+                "+256 (0)772 955 286",
+                "https://www.google.com/maps/place/");
+        clinics[26] = new Clinic("Ngonge Pharmaceuticals Limited",
+                "P.O. Box 449, Masaka, Uganda",
+                "+256 (0)481 421 078",
+                "https://www.google.com/maps/place/");
+        clinics[27] = new Clinic("Mukwano Medical Services Limited",
+                "P.O. Box 55，Masaka, Uganda",
+                "+256 (0)772 699 906",
+                "https://www.google.com/maps/place/");
+        clinics[28] = new Clinic("Kisa Pharmacy Limited",
+                "Located on Plot 3, Edward Avenue, Masaka,P.O. Box 55，Masaka, Uganda",
+                "+256 (0)772 512 6545",
+                "https://www.google.com/maps/place/");
+        clinics[29] = new Clinic("Equus Enterprises Pharmacy",
+                "P.O. Box 139，Masaka, Uganda",
+                "+256 (0)772 521 924",
+                "https://www.google.com/maps/place/");
+        clinics[30] = new Clinic("Byansi Services Limited Pharmacy",
+                "9 BroadWay Rd, Masaka, Uganda",
+                "+256 (0)481 421 433",
+                "https://www.google.com/maps/place/Byansi+Services+Ltd.+(OPD+Clinic+%26+Pharmacy)/@-0.3411667,31.7355802,17z/data=!3m1!4b1!4m5!3m4!1s0x19d78ec37253a109:0x87013a859493f6b2!8m2!3d-0.3411667!4d31.7377689");
+        clinics[31] = new Clinic("Arrow Pharmacy 2000 Limited",
+                "P.O. Box 1461，Masaka, Uganda",
+                "+256 (0)752 844 878",
+                "https://www.google.com/maps/place/");
 
-        for (int i = 0; i < 19; i++){
+
+        for (int i = 0; i < 32; i++){
             clinicNames[i] = clinics[i].getName();
         }
     }
