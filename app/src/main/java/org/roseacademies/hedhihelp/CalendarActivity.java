@@ -183,60 +183,60 @@ public class CalendarActivity extends AppCompatActivity implements View.OnClickL
         setContentView(R.layout.activity_calendar);
 
         // This gets a new reference to the database
-        mDBHelper = new PeriodDbHelper(this);
-        SQLiteDatabase db = mDBHelper.getReadableDatabase();
-
-        periodSettingsDbHelper = new PeriodSettingsDbHelper(this);
-
-
-        // Check the database to see if a settings row hasn't been created yet
-        if (!isSet()) {
-            createDefaultRow();
-        }
-
-        // If it has been created then we're rolling
-        Cursor cursor = getSettingsCursor();
-        gap = getGap(cursor);
-        length = getLength(cursor);
-        cursor.close();
-
-
-        int result = queryDB(db);
-
-        // Let's start doing some period logic
-        long start = getStartDate(db);
-        startDate = new Date(start);
-
-        // This gets the buttons mapped to what's going on
-        startTrack = (Button) findViewById(R.id.PeriodStatus);
-        startTrack.setOnClickListener(this);
-        endTrack = (Button) findViewById(R.id.StopPeriod);
-        endTrack.setOnClickListener(this);
-        settings  = (Button) findViewById(R.id.PeriodSettings);
-        settings.setOnClickListener(this);
-
-        // Let's map the CalendarView to something real quick
-        mCalendar = (MCalendarView) findViewById(R.id.calendarView);
-        mCalendar.setOnDateClickListener(new OnDateClickListener() {
-            @Override
-            public void onDateClick(View view, DateData date) {
-                Date current = new Date();
-                Calendar cal = Calendar.getInstance();
-                cal.setTime(current);
-                mCalendar.markDate(date);
-//                mCalendar.markDate(cal.get(Calendar.YEAR), cal.get(Calendar.MONTH), cal.get(Calendar.DAY_OF_MONTH));
-                if (prev != null) {
-                    mCalendar.unMarkDate(prev);
-                }
-                prev = date;
-
-                mCalendar.unMarkDate(cal.get(Calendar.YEAR), cal.get(Calendar.MONTH), cal.get(Calendar.DAY_OF_MONTH));
-            }
-        });
-//        mCalendar.setBackgroundColor(Color.CYAN);
-        mCalendar.setMarkedStyle(MarkStyle.BACKGROUND, Color.parseColor("#53868B"));
-//        mCalendar.setMarkedCell(R.layout.activity_calendar_cell_view);
-        updateUI(result);
+//        mDBHelper = new PeriodDbHelper(this);
+//        SQLiteDatabase db = mDBHelper.getReadableDatabase();
+//
+//        periodSettingsDbHelper = new PeriodSettingsDbHelper(this);
+//
+//
+//        // Check the database to see if a settings row hasn't been created yet
+//        if (!isSet()) {
+//            createDefaultRow();
+//        }
+//
+//        // If it has been created then we're rolling
+//        Cursor cursor = getSettingsCursor();
+//        gap = getGap(cursor);
+//        length = getLength(cursor);
+//        cursor.close();
+//
+//
+//        int result = queryDB(db);
+//
+//        // Let's start doing some period logic
+//        long start = getStartDate(db);
+//        startDate = new Date(start);
+//
+//        // This gets the buttons mapped to what's going on
+//        startTrack = (Button) findViewById(R.id.PeriodStatus);
+//        startTrack.setOnClickListener(this);
+//        endTrack = (Button) findViewById(R.id.StopPeriod);
+//        endTrack.setOnClickListener(this);
+//        settings  = (Button) findViewById(R.id.PeriodSettings);
+//        settings.setOnClickListener(this);
+//
+//        // Let's map the CalendarView to something real quick
+//        mCalendar = (MCalendarView) findViewById(R.id.calendarView);
+//        mCalendar.setOnDateClickListener(new OnDateClickListener() {
+//            @Override
+//            public void onDateClick(View view, DateData date) {
+//                Date current = new Date();
+//                Calendar cal = Calendar.getInstance();
+//                cal.setTime(current);
+//                mCalendar.markDate(date);
+////                mCalendar.markDate(cal.get(Calendar.YEAR), cal.get(Calendar.MONTH), cal.get(Calendar.DAY_OF_MONTH));
+//                if (prev != null) {
+//                    mCalendar.unMarkDate(prev);
+//                }
+//                prev = date;
+//
+//                mCalendar.unMarkDate(cal.get(Calendar.YEAR), cal.get(Calendar.MONTH), cal.get(Calendar.DAY_OF_MONTH));
+//            }
+//        });
+////        mCalendar.setBackgroundColor(Color.CYAN);
+//        mCalendar.setMarkedStyle(MarkStyle.BACKGROUND, Color.parseColor("#53868B"));
+////        mCalendar.setMarkedCell(R.layout.activity_calendar_cell_view);
+//        updateUI(result);
 
     }
 

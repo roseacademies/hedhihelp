@@ -1,35 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/background"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
 
 
     <sun.bob.mcalendarview.MCalendarView
         android:id="@+id/calendarView"
-        android:background="@android:color/white"
         android:layout_width="397dp"
         android:layout_height="355dp"
-        android:layout_marginTop="4dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:background="@android:color/white"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+    </sun.bob.mcalendarview.MCalendarView>
 
     <Button
         android:id="@+id/PeriodStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="120dp"
         android:layout_marginRight="120dp"
-        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_button"
         android:paddingLeft="4dp"
         android:paddingRight="4dp"
-        android:background="@drawable/rounded_button"
         android:text="@string/start_period_tracking"
         android:textColor="@color/green"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calendarView" />
 
@@ -37,15 +40,16 @@
         android:id="@+id/StopPeriod"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="120dp"
         android:layout_marginRight="120dp"
-        android:layout_marginTop="20dp"
-        android:paddingLeft="4dp"
-        android:paddingRight="4dp"
         android:background="@drawable/rounded_button"
         android:fontFamily="@font/raleway_bold"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
         android:text="@string/stop_period_tracking"
         android:textColor="@color/green"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calendarView" />
 
@@ -53,15 +57,29 @@
         android:id="@+id/PeriodSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="162dp"
-        android:layout_marginLeft="162dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginLeft="45dp"
         android:layout_marginTop="84dp"
-        android:paddingLeft="4dp"
-        android:paddingRight="4dp"
         android:background="@drawable/rounded_button"
         android:fontFamily="@font/raleway_bold"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
         android:text="@string/settings"
         android:textColor="@color/green"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calendarView" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cycle" />
+
 </android.support.constraint.ConstraintLayout>
