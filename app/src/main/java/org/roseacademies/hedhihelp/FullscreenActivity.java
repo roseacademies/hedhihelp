@@ -36,7 +36,6 @@ public class FullscreenActivity extends AppCompatActivity implements View.OnClic
     private int image_count = 0;
 
     private Integer images[];
-    private int texts[];
     private float[] lastTouchDownXY = new float[2];
 
     /**
@@ -98,21 +97,15 @@ public class FullscreenActivity extends AppCompatActivity implements View.OnClic
     };
 
     public void setImageArray(int module_number) {
-        if (module_number == 1) {
-            module_max = 10;
-        }
-        if (module_number == 2)
-            module_max = 12;
+        if (module_number == 1) module_max = 10;
+        else if (module_number == 2) module_max = 12;
+
         images = new Integer[module_max];
-        texts = new int[module_max];
-        for (int i=0;i < module_max;i++) {
+        for (int i=0; i < module_max; i++)
+        {
             images[i] = getResources().getIdentifier("module_" +
                             String.valueOf(module_number) + "_" + String.valueOf(i+1),
                     "drawable", getPackageName());
-            texts[i] = getResources().getIdentifier("module_" +
-                            String.valueOf(module_number) + "_" + String.valueOf(i+1),
-                    "string", getPackageName());
-
         }
 
     }
@@ -145,8 +138,6 @@ public class FullscreenActivity extends AppCompatActivity implements View.OnClic
     public void setCurrentImage() {
         final ImageView imageView = (ImageView) findViewById(R.id.modules_image);
         imageView.setImageResource(images[image_count]);
-        final TextView textView = (TextView) findViewById(R.id.myImageViewText);
-        textView.setText(texts[image_count]);
     }
 
     @Override
