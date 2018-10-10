@@ -17,14 +17,6 @@ public class LessonActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lesson);
 
-        // Get the Intent that started this activity and extract the string
-        Intent intent = getIntent();
-        String message = intent.getStringExtra(HomeActivity.EXTRA_MESSAGE);
-
-        // Capture the layout's TextView and set the string as its text
-        TextView textView = findViewById(R.id.textView7);
-        textView.setText(message);
-
         lessonOneButton = (Button) findViewById(R.id.lessonOneButton);
         lessonOneButton.setOnClickListener(this);
 
