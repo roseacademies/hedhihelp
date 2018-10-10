@@ -21,31 +21,31 @@ public class FullscreenActivity extends AppCompatActivity implements View.OnClic
      * Whether or not the system UI should be auto-hidden after
      * {@link #AUTO_HIDE_DELAY_MILLIS} milliseconds.
      */
-    private static final boolean AUTO_HIDE = true;
+    protected static final boolean AUTO_HIDE = true;
 
     /**
      * If {@link #AUTO_HIDE} is set, the number of milliseconds to wait after
      * user interaction before hiding the system UI.
      */
-    private static final int AUTO_HIDE_DELAY_MILLIS = 3000;
+    protected static final int AUTO_HIDE_DELAY_MILLIS = 3000;
 
     // Having only these two variables will work for now but soon we should change this to a SQL
     // table and store whichever image they were on for each individual module
-    private int module_max = 10;
-    private int module_count = 1;
-    private int image_count = 0;
+    protected int module_max = 10;
+    protected int module_count = 1;
+    protected int image_count = 0;
 
-    private Integer images[];
-    private float[] lastTouchDownXY = new float[2];
+    protected Integer images[];
+    protected float[] lastTouchDownXY = new float[2];
 
     /**
      * Some older devices needs a small delay between UI widget updates
      * and a change of the status and navigation bar.
      */
-    private static final int UI_ANIMATION_DELAY = 300;
-    private final Handler mHideHandler = new Handler();
-    private ImageView mContentView;
-    private final Runnable mHidePart2Runnable = new Runnable() {
+    protected static final int UI_ANIMATION_DELAY = 300;
+    protected final Handler mHideHandler = new Handler();
+    protected ImageView mContentView;
+    protected final Runnable mHidePart2Runnable = new Runnable() {
         @SuppressLint("InlinedApi")
         @Override
         public void run() {
@@ -62,8 +62,8 @@ public class FullscreenActivity extends AppCompatActivity implements View.OnClic
                     | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
         }
     };
-    private View mControlsView;
-    private final Runnable mShowPart2Runnable = new Runnable() {
+    protected View mControlsView;
+    protected final Runnable mShowPart2Runnable = new Runnable() {
         @Override
         public void run() {
             // Delayed display of UI elements
@@ -74,8 +74,8 @@ public class FullscreenActivity extends AppCompatActivity implements View.OnClic
             mControlsView.setVisibility(View.VISIBLE);
         }
     };
-    private boolean mVisible;
-    private final Runnable mHideRunnable = new Runnable() {
+    protected boolean mVisible;
+    protected final Runnable mHideRunnable = new Runnable() {
         @Override
         public void run() {
             hide();
@@ -86,7 +86,7 @@ public class FullscreenActivity extends AppCompatActivity implements View.OnClic
      * system UI. This is to prevent the jarring behavior of controls going away
      * while interacting with activity UI.
      */
-    private final View.OnTouchListener mDelayHideTouchListener = new View.OnTouchListener() {
+    protected final View.OnTouchListener mDelayHideTouchListener = new View.OnTouchListener() {
         @Override
         public boolean onTouch(View view, MotionEvent motionEvent) {
             if (AUTO_HIDE) {
@@ -150,7 +150,7 @@ public class FullscreenActivity extends AppCompatActivity implements View.OnClic
         delayedHide(100);
     }
 
-    private void toggle() {
+    protected void toggle() {
         if (mVisible) {
             hide();
         } else {
@@ -158,7 +158,7 @@ public class FullscreenActivity extends AppCompatActivity implements View.OnClic
         }
     }
 
-    private void hide() {
+    protected void hide() {
         // Hide UI first
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
@@ -173,7 +173,7 @@ public class FullscreenActivity extends AppCompatActivity implements View.OnClic
     }
 
     @SuppressLint("InlinedApi")
-    private void show() {
+    protected void show() {
         // Show the system bar
         mContentView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
                 | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION);
@@ -188,7 +188,7 @@ public class FullscreenActivity extends AppCompatActivity implements View.OnClic
      * Schedules a call to hide() in delay milliseconds, canceling any
      * previously scheduled calls.
      */
-    private void delayedHide(int delayMillis) {
+    protected void delayedHide(int delayMillis) {
         mHideHandler.removeCallbacks(mHideRunnable);
         mHideHandler.postDelayed(mHideRunnable, delayMillis);
     }

@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0099cc"
+    android:background="@drawable/background"
     tools:context="org.roseacademies.hedhihelp.FullscreenActivity">
     <Button
         android:id="@+id/end_module"
@@ -28,6 +28,7 @@
         android:keepScreenOn="true"
         />
 
+    <!--android:background="#0099cc"  -->
     <!-- This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows. -->
     <FrameLayout

@@ -9,7 +9,7 @@
 
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/welcome_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -27,13 +27,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/lessonbutton"
+        android:id="@+id/lesson_button"
         android:layout_width="0dp"
         android:layout_height="131dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/rounded_button"
         android:backgroundTint="@color/beige"
         android:fontFamily="@font/raleway_bold"
@@ -41,11 +41,11 @@
         android:text="@string/lessons_module"
         android:textColor="@android:color/white"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/button7"
+        app:layout_constraintBottom_toTopOf="@+id/resources_button"
         app:layout_constraintEnd_toStartOf="@+id/calendar_button"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/welcome_text" />
 
     <Button
         android:id="@+id/calendar_button"
@@ -59,14 +59,16 @@
         android:text="@string/calendar_module"
         android:textColor="@android:color/white"
         android:textSize="20sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/lessonbutton"
+        app:layout_constraintBaseline_toBaselineOf="@+id/lesson_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/lessonbutton" />
+        app:layout_constraintStart_toEndOf="@+id/lesson_button" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/resources_button"
         android:layout_width="0dp"
         android:layout_height="130dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
@@ -76,64 +78,48 @@
         android:text="@string/resources_module"
         android:textColor="@android:color/white"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/button9"
-        app:layout_constraintEnd_toStartOf="@+id/button8"
+        app:layout_constraintBottom_toTopOf="@+id/survey_button"
+        app:layout_constraintEnd_toStartOf="@+id/about_button"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lessonbutton" />
+        app:layout_constraintTop_toBottomOf="@+id/lesson_button" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/about_button"
         android:layout_width="0dp"
         android:layout_height="130dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/rounded_button"
-        android:backgroundTint="@color/beige"
+        android:backgroundTint="@color/colorAccent"
         android:fontFamily="@font/raleway_bold"
         android:onClick="sendMessage"
         android:text="@string/forum_module"
         android:textColor="@android:color/white"
         android:textSize="20sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button7"
+        app:layout_constraintBaseline_toBaselineOf="@+id/resources_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button7" />
+        app:layout_constraintStart_toEndOf="@+id/resources_button" />
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/survey_button"
         android:layout_width="0dp"
         android:layout_height="130dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginLeft="17dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/rounded_button"
-        android:backgroundTint="@color/coral"
+        android:backgroundTint="@color/cardview_dark_background"
         android:fontFamily="@font/raleway_bold"
-        android:text="@string/settings_module"
+        android:text="@string/survey_module"
         android:textColor="@android:color/white"
         android:textSize="20sp"
-        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button10"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button7" />
-
-    <Button
-        android:id="@+id/button10"
-        android:layout_width="0dp"
-        android:layout_height="130dp"
-        android:layout_marginStart="7dp"
-        android:layout_marginLeft="7dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/rounded_button"
-        android:backgroundTint="@color/blue"
-        android:fontFamily="@font/raleway_bold"
-        android:onClick="onClick"
-        android:text="@string/about_module"
-        android:textColor="@android:color/white"
-        android:textSize="20sp"
-        android:visibility="gone"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button9"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button9" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resources_button" />
+
 </android.support.constraint.ConstraintLayout>

@@ -10,9 +10,9 @@ import android.widget.TextView;
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener{
     public static final String EXTRA_MESSAGE = "org.roseacademies.hedhihelp.MESSAGE";
     Button mCalendarButton;
-    Button mForumButton;
+    Button mAboutButton;
     Button mClinicsButton;
-//    Button mAboutUs;
+    Button mSurveyButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,27 +22,27 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         mCalendarButton = (Button) findViewById(R.id.calendar_button);
         mCalendarButton.setOnClickListener(this);
 
-        mForumButton = (Button) findViewById(R.id.button8);
-        mForumButton.setOnClickListener(this);
+        mAboutButton = (Button) findViewById(R.id.about_button);
+        mAboutButton.setOnClickListener(this);
 
-        mClinicsButton = (Button) findViewById(R.id.button7);
+        mClinicsButton = (Button) findViewById(R.id.resources_button);
         mClinicsButton.setOnClickListener(this);
 
-//        mAboutUs = (Button) findViewById(R.id.button10);
-//        mAboutUs.setOnClickListener(this);
+        mSurveyButton = (Button) findViewById(R.id.survey_button);
+        mSurveyButton.setOnClickListener(this);
 
         // Get the Intent that started this activity and extract the string
         Intent intent = getIntent();
         String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
 
         // Capture the layout's TextView and set the string as its text
-        TextView textView = findViewById(R.id.textView6);
+        TextView textView = findViewById(R.id.welcome_text);
 //        textView.setText(message);
     }
 
     public void sendMessage(View view) {
         Intent intent = new Intent(this, LessonActivity.class);
-        Button button = (Button) findViewById(R.id.lessonbutton);
+        Button button = (Button) findViewById(R.id.lesson_button);
         String message = button.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
@@ -54,17 +54,17 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         if (id == R.id.calendar_button) { // This is the button for the calendar
             startActivity(new Intent(this, CalendarActivity.class));
         }
-        if (id == R.id.lessonbutton) {
+        if (id == R.id.lesson_button) {
             startActivity(new Intent(this, FullscreenActivity.class));
         }
-        if (id == R.id.button7) {
+        if (id == R.id.resources_button) {
             startActivity(new Intent(this, ClinicsActivity.class));
         }
-        if (id == R.id.button8) {
-            startActivity(new Intent(this, Forum.class));
+        if (id == R.id.about_button) {
+            startActivity(new Intent(this, AboutActivity.class));
         }
-//        if (id == R.id.button10) {
-//            startActivity(new Intent(this, about.class));
-//        }
+        if (id == R.id.survey_button) {
+            startActivity(new Intent(this, SurveyActivity.class));
+        }
     }
 }

@@ -30,6 +30,7 @@
         <activity android:name=".HomeActivity" />
         <activity android:name=".LessonActivity" />
         <activity android:name=".ResourceActivity" />
+        <activity android:name=".SurveyActivity" />
         <activity android:name=".CalendarActivity" />
         <activity
             android:name=".CalendarSettingsActivity"
@@ -50,7 +51,7 @@
             android:label="SoloClinic"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Forum"
+            android:name=".AboutActivity"
             android:label="@string/title_activity_forum"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".about"

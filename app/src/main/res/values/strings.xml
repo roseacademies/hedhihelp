@@ -8,8 +8,9 @@
     <!-- Strings related to home screen -->
     <string name="lessons_module">Lessons</string>
     <string name="calendar_module">Calendar</string>
-    <string name="settings_module">Settings</string>
-    <string name="about_module">Our Team</string>
+    <string name="medical_facilities_module">Medical Facilities</string>
+    <string name="survey_module">Survey Form</string>
+    <string name="about_module">About Rose</string>
 
     <!-- Strings related to lessons screen -->
     <string name="lesson_text">User\'s Lessons</string>
@@ -68,6 +69,8 @@
     <string name="account_crete_prompt">Don\'t have an account?</string>
     <string name="lesson_two">Myths and Misconceptions</string>
     <string name="welcome_text">Welcome!</string>
+    <string name="survey_heading">Survey Forms</string>
+    <string name="fem_health_survey">Feminine Health Survey</string>
 
     <string name="title_activity_about" translatable="false">about</string>
     <string name="action_settings">Settings</string>
