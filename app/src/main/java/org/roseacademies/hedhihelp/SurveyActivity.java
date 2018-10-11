@@ -8,32 +8,37 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 public class SurveyActivity extends AppCompatActivity implements View.OnClickListener, View.OnTouchListener {
 
     public static final String EXTRA_MESSAGE = "org.roseacademies.hedhihelp.MESSAGE";
-    private View mControlsView;
-    private boolean mVisible;
-    private ImageView mContentView;
-    private float[] lastTouchDownXY = new float[2];
-    private int image_max = 2;
-    private int image_count;
-    private Integer images[];
+    protected View mControlsView;
+    protected boolean mVisible;
+    protected ImageView mContentView;
+    protected float[] lastTouchDownXY = new float[2];
+    protected int image_max = 2;
+    protected int image_count;
+    protected Integer images[];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        initialize();
+    }
+
+    protected void initialize() {
+
         setContentView(R.layout.activity_modules);
 
         mVisible = true;
         mControlsView = findViewById(R.id.fullscreen_content_controls);
-        mContentView = (ImageView) findViewById(R.id.modules_image);
+        mContentView = findViewById(R.id.modules_image);
 
         mContentView.setOnClickListener(this);
         findViewById(R.id.modules_image).setOnTouchListener(this);
 
-        images = new Integer[2];
+        images = new Integer[getImage_max()];
         images[0] = getResources().getIdentifier("survey_1", "drawable", getPackageName());
         images[1] = getResources().getIdentifier("survey_2", "drawable", getPackageName());
 
@@ -78,12 +83,17 @@ public class SurveyActivity extends AppCompatActivity implements View.OnClickLis
             else if (x < (height/2)) {
                 image_count -= 1;
             }
-            if (image_count < image_max && image_count >= 0)
+            if (image_count < getImage_max() && image_count >= 0)
                 updateUI();
             else
                 finish();
 
         }
+    }
+
+    protected int getImage_max()
+    {
+        return image_max;
     }
 
     public void updateUI() {
