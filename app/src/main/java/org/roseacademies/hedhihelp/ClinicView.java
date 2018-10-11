@@ -30,25 +30,25 @@ public class ClinicView extends AppCompatActivity implements View.OnClickListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.clinic_info);
 
-        webview = (WebView) findViewById(R.id.myWebView);
+        webview = findViewById(R.id.myWebView);
         webview.setVisibility(View.GONE);
 
         this.selected = (Clinic) getIntent().getSerializableExtra("SelectedClinic");
 
-        TextView mT1 = (TextView) findViewById(R.id.clinic_name);
+        TextView mT1 = findViewById(R.id.clinic_name);
         mT1.setText(selected.getName());
 
-        TextView mT2 = (TextView) findViewById(R.id.clinic_address);
+        TextView mT2 = findViewById(R.id.clinic_address);
         mT2.setText(selected.getAddress());
 
-        TextView mT3 = (TextView) findViewById(R.id.clinic_phone);
+        TextView mT3 = findViewById(R.id.clinic_phone);
         mT3.setText(selected.getPhone());
 
-        mWebButton = (Button) findViewById(R.id.directions_button);
+        mWebButton = findViewById(R.id.directions_button);
         mWebButton.setVisibility(View.VISIBLE);
         mWebButton.setOnClickListener(this);
 
-        mHideButton = (Button) findViewById(R.id.hide_button);
+        mHideButton = findViewById(R.id.hide_button);
         mHideButton.setVisibility(View.GONE);
         mHideButton.setOnClickListener(this);
     }

@@ -30,7 +30,7 @@ public class ClinicsActivity extends AppCompatActivity implements AdapterView.On
         initClinics();
         ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.activity_clinics,R.id.textview, clinicNames);
 
-        ListView listView = (ListView) findViewById(R.id.mobile_list);
+        ListView listView = findViewById(R.id.mobile_list);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(this);
     }

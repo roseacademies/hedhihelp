@@ -32,7 +32,6 @@ public class FullscreenActivity extends AppCompatActivity implements View.OnClic
     // Having only these two variables will work for now but soon we should change this to a SQL
     // table and store whichever image they were on for each individual module
     protected int module_max = 10;
-    protected int module_count = 1;
     protected int image_count = 0;
 
     protected Integer images[];
@@ -118,7 +117,7 @@ public class FullscreenActivity extends AppCompatActivity implements View.OnClic
 
         mVisible = true;
         mControlsView = findViewById(R.id.fullscreen_content_controls);
-        mContentView = (ImageView) findViewById(R.id.modules_image);
+        mContentView = findViewById(R.id.modules_image);
 
         Bundle bundle = getIntent().getExtras();
         int moduleNum = bundle.getInt("moduleNum");
@@ -136,7 +135,7 @@ public class FullscreenActivity extends AppCompatActivity implements View.OnClic
     }
 
     public void setCurrentImage() {
-        final ImageView imageView = (ImageView) findViewById(R.id.modules_image);
+        final ImageView imageView = findViewById(R.id.modules_image);
         imageView.setImageResource(images[image_count]);
     }
 
@@ -202,16 +201,13 @@ public class FullscreenActivity extends AppCompatActivity implements View.OnClic
         DisplayMetrics displayMetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         int height = displayMetrics.heightPixels;
-        int width = displayMetrics.widthPixels;
 
-        int i = v.getId();
         if (v == findViewById(R.id.end_module)) {
             finish();
         }
 
         if (v == mContentView) {
             float x = lastTouchDownXY[0];
-            float y = lastTouchDownXY[1];
 
             if (x >= (height/2)) {
                 image_count += 1;

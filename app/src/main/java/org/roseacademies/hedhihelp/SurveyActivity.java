@@ -66,16 +66,13 @@ public class SurveyActivity extends AppCompatActivity implements View.OnClickLis
         DisplayMetrics displayMetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         int height = displayMetrics.heightPixels;
-        int width = displayMetrics.widthPixels;
 
-        int i = view.getId();
         if (view == findViewById(R.id.end_module)) {
             finish();
         }
 
         if (view == mContentView) {
             float x = lastTouchDownXY[0];
-            float y = lastTouchDownXY[1];
 
             if (x >= (height/2)) {
                 image_count += 1;

@@ -19,30 +19,23 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        mCalendarButton = (Button) findViewById(R.id.calendar_button);
+        mCalendarButton = findViewById(R.id.calendar_button);
         mCalendarButton.setOnClickListener(this);
 
-        mAboutButton = (Button) findViewById(R.id.about_button);
+        mAboutButton = findViewById(R.id.about_button);
         mAboutButton.setOnClickListener(this);
 
-        mClinicsButton = (Button) findViewById(R.id.resources_button);
+        mClinicsButton = findViewById(R.id.resources_button);
         mClinicsButton.setOnClickListener(this);
 
-        mSurveyButton = (Button) findViewById(R.id.survey_button);
+        mSurveyButton = findViewById(R.id.survey_button);
         mSurveyButton.setOnClickListener(this);
 
-        // Get the Intent that started this activity and extract the string
-        Intent intent = getIntent();
-        String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
-
-        // Capture the layout's TextView and set the string as its text
-        TextView textView = findViewById(R.id.welcome_text);
-//        textView.setText(message);
     }
 
     public void sendMessage(View view) {
         Intent intent = new Intent(this, LessonActivity.class);
-        Button button = (Button) findViewById(R.id.lesson_button);
+        Button button = findViewById(R.id.lesson_button);
         String message = button.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
