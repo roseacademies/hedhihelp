@@ -15,6 +15,10 @@
     <!-- Strings related to lessons screen -->
     <string name="lesson_text">User\'s Lessons</string>
     <string name="lesson_one">Sexual Development</string>
+    <string name="lesson_two">Myths and Misconceptions</string>
+    <string name="lesson_three">What is Menstruation?</string>
+    <string name="lesson_four">Frequently Asked Questions</string>
+    <string name="lesson_five">Time to see a Doctor</string>
     <string name="lesson_future">Coming Soon…</string>
 
     <!-- Strings related to login -->
@@ -67,7 +71,6 @@
     <string name="choose_a_language">Choose a Language:</string>
     <string name="title_activity_forum">Discussion</string>
     <string name="account_crete_prompt">Don\'t have an account?</string>
-    <string name="lesson_two">Myths and Misconceptions</string>
     <string name="welcome_text">Welcome!</string>
     <string name="survey_heading">Survey Forms</string>
     <string name="fem_health_survey">Feminine Health Survey</string>

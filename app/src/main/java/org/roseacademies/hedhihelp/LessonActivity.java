@@ -11,17 +11,29 @@ public class LessonActivity extends AppCompatActivity implements View.OnClickLis
 
     Button lessonOneButton;
     Button lessonTwoButton;
+    Button lessonThreeButton;
+    Button lessonFourButton;
+    Button lessonFiveButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lesson);
 
-        lessonOneButton = (Button) findViewById(R.id.lessonOneButton);
+        lessonOneButton = findViewById(R.id.lessonOneButton);
         lessonOneButton.setOnClickListener(this);
 
-        lessonTwoButton = (Button) findViewById(R.id.lessonTwoButton);
+        lessonTwoButton = findViewById(R.id.lessonTwoButton);
         lessonTwoButton.setOnClickListener(this);
+
+        lessonThreeButton = findViewById(R.id.lessonThreeButton);
+        lessonThreeButton.setOnClickListener(this);
+
+        lessonFourButton = findViewById(R.id.lessonFourButton);
+        lessonFourButton.setOnClickListener(this);
+
+        lessonFiveButton = findViewById(R.id.lessonFiveButton);
+        lessonFiveButton.setOnClickListener(this);
     }
 
     @Override
@@ -30,8 +42,18 @@ public class LessonActivity extends AppCompatActivity implements View.OnClickLis
         int module_num = 0;
         if (id == R.id.lessonOneButton) {
             module_num = 1;
-        } else if (id == R.id.lessonTwoButton) {
+        }
+        else if (id == R.id.lessonTwoButton) {
             module_num = 2;
+        }
+        else if (id == R.id.lessonThreeButton) {
+            module_num = 3;
+        }
+        else if (id == R.id.lessonFourButton) {
+            module_num = 4;
+        }
+        else if (id == R.id.lessonFiveButton) {
+            module_num = 5;
         }
         startModule(module_num);
     }
