@@ -98,7 +98,7 @@ public class FullscreenActivity extends AppCompatActivity implements View.OnClic
     public void setImageArray(int module_number) {
         if (module_number == 1) module_max = 10;
         else if (module_number == 2) module_max = 12;
-        else if (module_number == 3) module_max = 12;
+        else if (module_number == 3) module_max = 14;
         else if (module_number == 4) module_max = 5;
         else if (module_number == 5) module_max = 6;
 
